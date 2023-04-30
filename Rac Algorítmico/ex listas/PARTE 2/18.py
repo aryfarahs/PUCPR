@@ -12,10 +12,6 @@ while True:
     else:
         vote.append(n)
 
-for c in range(len(vote)):
-    if vote[c] not in sem_rep:
-        sem_rep.append(vote[c])
-
 vote.sort()
 sem_rep.sort()
 print()
@@ -28,6 +24,10 @@ for c in range(1, 23):
     num = vote.count(c)
     if num != 0:
         qnt.append(num)
+
+for c in range(len(vote)):
+    if vote[c] not in sem_rep:
+        sem_rep.append(vote[c])
 
 for c in range(len(qnt)):
     p = f'{qnt[c] / len(vote) * 100:.1f}'

@@ -7,4 +7,4 @@ print(f'NOTAS:', end=' ')
 for item in l:
     print(item, end=', ')
 print()
-print(F'MÉDIA: {sum(l) / len(l)}')
+print(f'MÉDIA: {sum(l) / len(l)}')
