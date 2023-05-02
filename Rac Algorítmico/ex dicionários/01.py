@@ -45,6 +45,9 @@ while True:
             estoque['hamburguer'] -= 1
             estoque['tomate'] -= 1
             estoque['bacon'] -= 1
-            estoque['ovo'] -= 1                     
-    for ingrediente, quant in estoque:
-        print(f'{ingrediente:<10}{quant:>6}')
+            estoque['ovo'] -= 1
+    print('—'*40)
+    print(f'{"ESTOQUE":^40}')
+    print('—'*40)
+    for i, v in estoque.items():
+        print(f'{i.title():<12}  -  {v:>6}')
