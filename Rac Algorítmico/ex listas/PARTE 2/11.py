@@ -9,7 +9,7 @@ for c in range(10):
     n2 = int(input(f'Digite o {c+1}º valor da 2ª lista: '))
     v2.append(n2)
 for c in range(10):
-    n3 = int(input(f'Digite o {c+1}º valor da 2ª lista: '))
+    n3 = int(input(f'Digite o {c+1}º valor da 3ª lista: '))
     v3.append(n3)
 for c in range(10):
     v4.append(v1[c])

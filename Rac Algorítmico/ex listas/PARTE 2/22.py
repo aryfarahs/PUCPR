@@ -18,7 +18,7 @@ problem = []
 tot = 0
 
 while True:
-    ni = int(input('Número de identificação: '))
+    ni = int(input('Número de identificação [0 p/ parar]: '))
     if ni == 0:
         break
     else:
