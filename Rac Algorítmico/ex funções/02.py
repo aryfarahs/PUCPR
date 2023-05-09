@@ -1,5 +1,9 @@
 def pascal(num):
-    for c in range(num):
-        print(f'{1} ', (1 * c)*c)
+    for l in range(1, num+1):
+        for c in range(1, l+1):
+            print(c, end=' ')
+        print()
 
-pascal(4)
+
+num = int(input('Digite o último número: '))
+pascal(num)

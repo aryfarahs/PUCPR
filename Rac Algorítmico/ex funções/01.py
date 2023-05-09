@@ -4,4 +4,5 @@ def piramide(num):
         c += 1
 
 
-piramide(4)
+num = int(input('Digite o número máximo: '))
+piramide(num)

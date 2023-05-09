@@ -2,7 +2,7 @@ def valorPagamento(valor, dias):
     if dias == 0:
         return f' Valor com multa: R${valor:.2f}'
     else:
-        valor += (valor * 0.03) + (0.001 *  dias)
+        valor += (valor * 0.03) + ((0.001 * valor) *  dias)
         return f'Valor com multa: R${valor:.2f}'
 
 while True:
