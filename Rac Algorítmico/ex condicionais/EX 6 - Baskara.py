@@ -19,8 +19,8 @@ if delta >= 0:
     print(f'{b2} - (4.{a}.{c})')
     print(f'O delta é igual a {delta:.2f}')
     b3 = b * -1
-    x1 = b3 + delta**0.5
-    x2 = b3 - delta**0.5
+    x1 = -b3 + delta**0.5
+    x2 = -b3 - delta**0.5
     print('Depois, podemos calcular o "X": ')
     print('x = -b +- √delta / 2a')
     print(f'x = -{b} +- √{delta} / {2*a}')
