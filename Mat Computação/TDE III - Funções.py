@@ -1,0 +1,1 @@
+def primeiro(a, b):
