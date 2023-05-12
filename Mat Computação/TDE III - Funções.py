@@ -35,14 +35,14 @@ def raiz(a, b, delta, sinal=1):
 def baskhara(a, b, c):
     delta = c_delta(a, b, c)
     if delta < 0:
-        print('Nenhuma raíz real encontrada.')
+        return 'Nenhuma raíz real encontrada'
     elif delta == 0:
         x = raiz(a, b, delta)
-        print(f'Raiz encontrada: {x}')
+        return f'Raíz: {x}'
     else:
         x1 = raiz(a, b, delta)
         x2 = raiz(a, b, delta, -1)
-        print(f'As raizes da equação são; {x1} e {x2}')
+        return f'Raízes: {x1} e {x2}'
 
 
 
@@ -65,7 +65,7 @@ while True:
         a = float(input('Digite o valor de a: '))
         b = float(input('Digite o valor de b: '))
         c = float(input('Digite o valor de c: '))
-        baskhara(a, b, c)
+        print(baskhara(a, b, c))
 
     print('—'*40)
     cont = str(input('Deseja continuar? ')).strip().upper()[0]
