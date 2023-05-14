@@ -12,6 +12,6 @@ pIdeal = 0
 if sex in 'M':
     pIdeal = (72.7 * altura / 100) - 58
     print(f'O seu peso ideal é {pIdeal:.1f} kg')
-if sex in 'F':
+elif sex in 'F':
     pIdeal = (62.1 * altura / 100) - 44.7
     print(f'O seu peso ideal é {pIdeal:.1f} kg')
