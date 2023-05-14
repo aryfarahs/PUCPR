@@ -22,6 +22,9 @@ def mostrar(q):
 os.system('cls')
 n = list(range(1,10))
 comb = permutations(n)
+count = 1
 for c in comb:
     if verificar(c):
-        mostrar(c) 
+        print(f'\033[1;36m{count}º quadrado:\033[m')
+        count += 1 
+        mostrar(c)
