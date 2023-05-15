@@ -7,10 +7,11 @@ def valorPagamento(valor, dias):
 
 while True:
     valor = float(input('Digite o valor [0 p/ parar]: R$'))
-    dias = int(input('Quantos dias de atraso? '))
-    print(valorPagamento(valor, dias))
     if valor == 0:
         break
+    dias = int(input('Quantos dias de atraso? '))
+    print(valorPagamento(valor, dias))
+
 
 
 
