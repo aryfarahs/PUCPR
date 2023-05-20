@@ -24,14 +24,56 @@ def valores(a, b):
     return a, b
 
 
-def valid(a, b):
-    # define os conjuntos
-    A = set(a)
-    B = set(b)
-    print(f'Conjunto A: {A}')
-    print(f'Conjunto B: {B}')
+def opt():
+    title('OPÇÕES')
+    print('[1] Subconjunto Próprio\n'
+          '[2] União\n'
+          '[3] Intersecção\n'
+          '[4] Diferença\n'
+          '[5]   <---')
+    
+
+def sub_prop(a, b):
+    if len(a) == len(b):
+        print('Nenhum dos conjuntos é subconjunto próprio do outro.')
+    else:
+        if a.issubset(b):
+            print('A é subconjunto próprio de B.')
+        elif b.issubset(a):
+            print('B é um subconjunto própiro de A.')
+        else:
+            print('Nenhum dos conjuntos é subconjunto próprio do outro.')
+        
+def uniao(a, b):
+    u = []
+    for val in a:
+        u.append(val)
+    for val in b:
+        u.append(val)
+    U = set(u)
+    print(f'A ∪ B = {U}' if len(U) != 0 else 'A ∪ B = Ø')
+    
+
+def inter(a, b):
+    i = []
+    for val in a:
+        if val in b:
+            i.append(val)
+    
+    I = set(i)
+    print(f'A ∩ B = {I}')
 
 
-def opt(x):
-    title('OPÇÕES', 30)
-    print('[1] ')
+def dif(a, b):
+    d1 = []
+    d2 = []
+    for val in a:
+        if val not in b:
+            d1.append(val)
+    for val in b:
+        if val not in a:
+            d2.append(val)
+    D1 = set(d1)
+    D2 = set(d2)
+    print(f'A - B = {D1}' if len(d1) != 0 else 'A - B = Ø')
+    print(f'B - A = {D2}' if len(d2) != 0 else 'B - A = Ø')

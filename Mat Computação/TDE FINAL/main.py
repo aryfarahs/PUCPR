@@ -11,19 +11,93 @@ opção nos meus chame uma função
 '''
 
 from os import system
+from titulo import title
 import conjuntos
+import funcoes
 
-print('[1] Conjuntos\n'
-      '[2] Funções\n'
-      '[3] Matrizes\n'
-      '[4] Sair')
 
-choice = int(input('O que deseja analisar? '))
+while True:
+      system('cls')
+      title('MENU')
+      print('[1] Conjuntos\n'
+            '[2] Funções\n'
+            '[3] Matrizes\n'
+            '[4] Sair')
+      choice = int(input('O que deseja analisar? '))
 
-if choice == 1:
-    system('cls')
-    # coletando e validando conjuntos
-    a = []
-    b = []
-    conjuntos.valores(a, b)
-    conjuntos.valid(a, b)
+      # operações com conjuntos
+      if choice == 1:
+            system('cls')
+
+            # coletando e validando conjuntos
+            a = []
+            b = []
+            conjuntos.valores(a, b)
+            A = set(a)
+            B = set(b)
+
+            # opções
+            while True:
+                  system('cls')
+                  print(f'Conjunto A: {A}' if len(a) != 0 else 'Conjunto A: Ø')
+                  print(f'Conjunto B: {B}' if len(b) != 0 else 'Conjunto B: Ø')
+                  conjuntos.opt()
+                  ans = int(input('O que deseja ver? '))
+                  print('-' * 30)
+
+                  # resultados
+                  if ans == 1:
+                        conjuntos.sub_prop(A, B)
+                        input('<enter>')
+                  elif ans == 2:
+                        conjuntos.uniao(A, B)
+                        input('<enter>')
+                  elif ans == 3:
+                        conjuntos.inter(A, B)
+                        input('<enter>')
+                  elif ans == 4:
+                        conjuntos.dif(A, B)
+                        input('<enter>')
+                  elif ans == 5:
+                        break
+
+      # funções
+      elif choice == 2:
+            system('cls')
+            while True:
+                  # tipo da função
+                  funcoes.type()
+                  ans = int(input('Escolha 1 tipo de função: '))
+                  print('-' * 30)
+
+                  # coletando coeficientes
+                  if ans == 1:
+                        num_a = input('a = ')
+                        num_b = input('b = ')
+                        a = float(num_a)
+                        b = float(num_b)
+                        
+
+                  elif ans == 2:
+                        pass
+                  elif ans == 3:
+                        pass
+                  elif ans == 4:
+                        break
+
+
+      # matrizes
+      elif choice == 3:
+            pass
+
+      # sair do programa
+      elif choice == 4:
+            break
+
+      # erro
+      elif choice < 1 or choice > 4:
+            print('Digite uma escolha válida')
+
+# fim         
+print('-' * 30)
+print('Obrigado pela preferência!')
