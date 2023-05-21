@@ -16,7 +16,7 @@ def opt_afim():
           '[3] Ver gráfico\n'
           '[4]   <---')
 
-def direcao(a, b):
+def direcao_afim(a):
         if a > 0:
             print('A função é crescente.')
         elif a < 0:
@@ -35,7 +35,7 @@ def choose_afim(a, b, x):
     print(f'Se x = {x}, f(x) = {y}')
 
 
-def grafico(x, y):
+def grafico_afim(x, y):
     plt.plot(x, y)
     plt.xlabel('Eixo X')
     plt.ylabel('Eixo Y')
@@ -54,7 +54,7 @@ def opt_seg():
     print('[1] Raíz da função\n'
           '[2] Escolher o x\n'
           '[3] Vértices\n'
-          '[4] Ver gráfico\n'
+          '[4] Gráfico\n'
           '[5]   <---')
 
 
@@ -80,3 +80,39 @@ def baskhara(a, b, c):
         x1 = raiz(a, b, delta)
         x2 = raiz(a, b, delta, -1)
         return f'Raízes: {x1} e {x2}'
+    
+
+def grafico_seg(x, y):
+    plt.plot(x, y)
+    plt.xlabel('Eixo X')
+    plt.ylabel('Eixo Y')
+    plt.title('Função do 2º Grau')
+    plt.show()
+
+
+def opt_exp():
+    print('[1] Escolher o x\n'
+          '[2] Gráfico\n'
+          '[3]   <---')
+    
+
+def direcao_exp(a):
+    if a > 1:
+        print('A função é crescente.')
+    elif 0 < a < 1:
+        print('A função é decrescente.')
+    elif a <= 0:
+        print('A função é inexistente.')
+    elif a == 1:
+        print('A função é constante')
+
+def choose_exp(a, x):
+    y = a**x
+    print(f'Se x = {x}, y = {y}')
+    
+def grafico_exp(x, y):
+    plt.plot(x, y)
+    plt.xlabel('Eixo X')
+    plt.ylabel('Eixo Y')
+    plt.title('Função Exponencial')
+    plt.show()

@@ -14,6 +14,7 @@ from os import system
 from titulo import title
 import conjuntos
 import funcoes
+from numpy import arange
 
 
 while True:
@@ -62,6 +63,7 @@ while True:
                         break
                   elif ans > 5 or ans < 1:
                         print('Digite uma opção válida.')
+                        input('<enter>')
 
       # funções
       elif choice == 2:
@@ -86,7 +88,7 @@ while True:
                               system('cls')
                               title('FUNÇÃO AFIM')
                               print(f'f(x) = {a}x + {b}')
-                              funcoes.direcao(a, b)
+                              funcoes.direcao_afim(a)
                               print('-' * 30)
                               funcoes.opt_afim()
                               print('-' * 30)
@@ -97,23 +99,27 @@ while True:
                                     input('<enter>')
                               elif opc == 2:
                                     x = int(input('Digite o valor de x: '))
-                                    funcoes.choose(a, b, x)
+                                    funcoes.choose_afim(a, b, x)
                                     input('<enter>')
                               elif opc == 3:
-                                    x = list(range(-10, 11))
+                                    x = arange(-10, 10, 0.1)
                                     y = [a*valor + b for valor in x]
-                                    funcoes.grafico(x, y)
+                                    funcoes.grafico_afim(x, y)
                                     input('<enter>')
                               elif opc == 4:
                                     break
                               elif opc > 4 or opc < 1:
                                     print('Digite uma opção válida.')
+                                    input('<enter>')
 
                   elif ans == 2:
                         system('cls')
-                        a = float(input('Digite o valor de a: '))
-                        b = float(input('Digite o valor de b: '))
-                        c = float(input('Digite o valor de c: '))
+                        num_a = input('Digite o valor de a: ')
+                        num_b = input('Digite o valor de b: ')
+                        num_c = input('Digite o valor de c: ')
+                        a = float(num_a)
+                        b = float(num_b)
+                        c = float(num_c)
                         while True:
                               system('cls')
                               title('FUNÇÃO 2º GRAU')
@@ -133,17 +139,59 @@ while True:
                               elif opc == 3:
                                     funcoes.vertice(a, b, c)
                                     input('<enter>')
+                              elif opc == 4:
+                                    x = arange(-10, 10, 0.1)
+                                    y = [a*(valor**2) + b*valor + c for valor in x]
+                                    funcoes.grafico_seg(x,y)
+                                    input('<enter>')
+                              elif opc == 5:
+                                    break
+                              elif opc > 5 or opc < 1:
+                                    print('Digite uma opção válida')
+                                    input('<enter>')
+
                   elif ans == 3:
-                        pass
+                        system('cls')
+                        num_a = input('a = ')
+                        a = float(num_a)
+                        while True:
+                              system('cls')
+                              title('FUNÇÃO EXPONENCIAL')
+                              print(f'f(x) = {a}**x')
+                              funcoes.direcao_exp(a)
+                              print('-' * 30)
+                              funcoes.opt_exp()
+                              print('-' * 30)
+                              opc = int(input('O que mais deseja fazer? '))
+                              print('-' * 30)
+                              if opc == 1:
+                                    x = int(input('Digite o valor de x: '))
+                                    funcoes.choose_exp(a, x)
+                                    input('<enter>')
+                              elif opc == 2:
+                                    x = arange(-10, 10, 0.1)
+                                    y = [a**valor for valor in x]
+                                    funcoes.grafico_exp(x, y)
+                                    input('<enter>')
+                              elif opc == 3:
+                                    break
+
+                              elif opc > 3 or opc < 1:
+                                    print('Digite uma opção válida')
+                                    input('<enter>')
+
                   elif ans == 4:
                         break
+
                   elif ans > 4 or ans < 1:
                         print('Digite uma opção válida')
+                        input('<enter>')
 
 
       # matrizes
       elif choice == 3:
-            pass
+            print('Trabalhando nessa opção...')
+            input('<enter>')
 
       # sair do programa
       elif choice == 4:
@@ -152,7 +200,9 @@ while True:
       # erro
       elif choice < 1 or choice > 4:
             print('Digite uma escolha válida')
+            input('<enter>')
 
 # fim         
 print('-' * 30)
 print('Obrigado pela preferência!')
+print('-' * 30)

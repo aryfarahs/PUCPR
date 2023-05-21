@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from math import sqrt
+from os import system
 
 def formato(x):
     if x % 1 == 0:
@@ -12,6 +13,14 @@ def grafico(x, y):
     plt.xlabel('Eixo X')
     plt.ylabel('Eixo Y')
     plt.title('Função do 1º Grau')
+    plt.show()
+
+
+def grafico_seg(x, y):
+    plt.plot(x, y)
+    plt.xlabel('Eixo X')
+    plt.ylabel('Eixo Y')
+    plt.title('Função do 2º Grau')
     plt.show()
 
 def primeiro(a, b):
@@ -44,15 +53,50 @@ def baskhara(a, b, c):
         x2 = raiz(a, b, delta, -1)
         return f'Raízes: {x1} e {x2}'
 
+def vertice(a, b, c):
+    xv = -b / 2*a
+    yv = a*(xv**2) + b*xv + c
+    print(f'Vértice: ({xv}, {yv})')
+    print('Ponto mínimo.' if a > 0 else 'Ponto máximo.')
+
+def leiaInt(num):
+    while True:
+        try:
+            n = int(input(num))
+        except (ValueError, TypeError):
+            print('\033[1;31mERRO! Digite um número inteiro.\033[m')
+        except (KeyboardInterrupt):
+            print('\n\033[1;31mERRO! O usuário decidiu interromper o programa.\033[m')
+            return 0
+        else:
+            return n
 
 
-print('[1] Função do 1º grau\n[2] Função do 2º grau')
-print('—'*40)
+def leiaFloat(num):
+    while True:
+        try:
+            r1 = input(num).replace(',', '.')
+            r = float(r1)
+        except (ValueError, TypeError):
+            print('\033[1;31mERRO! Digite um número decimal.\033[m')
+            continue
+        except (KeyboardInterrupt):
+            print('\n\033[1;31mERRO! O usuário decidiu interromper o programa.\033[m')
+            return 0
+        else:
+            return r
+        
+
 while True:
-    ans = int(input('O que deseja calcular? '))
+    system('cls')
+    print('[1] Função do 1º grau\n'
+          '[2] Função do 2º grau\n'
+          '[3] Sair')
+    print('—'*40)
+    ans = leiaInt(input('O que deseja? '))
     if ans == 1:
-        a = float(input('Digite o valor de a: '))
-        b = float(input('Digite o valor de b: '))
+        a = leiaFloat(input('Digite o valor de a: '))
+        b = leiaFloat(input('Digite o valor de b: '))
         print('—'*40)
         primeiro(a, b)
         graf = str(input('Deseja gerar um gráfico? ')).strip().upper()[0]
@@ -62,12 +106,23 @@ while True:
             grafico(x, y)
 
     elif ans == 2:
-        a = float(input('Digite o valor de a: '))
-        b = float(input('Digite o valor de b: '))
-        c = float(input('Digite o valor de c: '))
+        a = leiaFloat(input('Digite o valor de a: '))
+        b = leiaFloat(input('Digite o valor de b: '))
+        c = leiaFloat(input('Digite o valor de c: '))
+        print('—'*40)
         print(baskhara(a, b, c))
+        vertice(a, b, c)
+        graf = str(input('Deseja gerar um gráfico? ')).strip().upper()[0]
+        if graf in 'S':
+            x = list(range(-10, 11))
+            y = [a*(valor**2) + b*valor + c for valor in x]
+            grafico_seg(x, y)
 
-    print('—'*40)
-    cont = str(input('Deseja continuar? ')).strip().upper()[0]
-    if cont in 'N':
+        print('—'*40)
+    elif ans == 3:
         break
+    
+    elif ans < 1 or ans > 3:
+        print('Digite uma opção válida.')
+
+print('Obrigado pela preferência!')
