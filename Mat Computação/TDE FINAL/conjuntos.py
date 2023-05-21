@@ -61,7 +61,7 @@ def inter(a, b):
             i.append(val)
     
     I = set(i)
-    print(f'A ∩ B = {I}')
+    print(f'A ∩ B = {I}' if len(I) != 0 else 'A ∩ B = Ø')
 
 
 def dif(a, b):

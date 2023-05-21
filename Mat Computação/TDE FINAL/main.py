@@ -60,30 +60,85 @@ while True:
                         input('<enter>')
                   elif ans == 5:
                         break
+                  elif ans > 5 or ans < 1:
+                        print('Digite uma opção válida.')
 
       # funções
       elif choice == 2:
             system('cls')
             while True:
+                  system('cls')
                   # tipo da função
                   funcoes.type()
+                  print('-' * 30)
                   ans = int(input('Escolha 1 tipo de função: '))
                   print('-' * 30)
 
                   # coletando coeficientes
                   if ans == 1:
-                        num_a = input('a = ')
-                        num_b = input('b = ')
+                        system('cls')
+                        num_a = input('a = ').replace(',', '.')
+                        num_b = input('b = ').replace(',', '.')
                         a = float(num_a)
                         b = float(num_b)
-                        
+                        print('-' * 30)
+                        while True:
+                              system('cls')
+                              title('FUNÇÃO AFIM')
+                              print(f'f(x) = {a}x + {b}')
+                              funcoes.direcao(a, b)
+                              print('-' * 30)
+                              funcoes.opt_afim()
+                              print('-' * 30)
+                              opc = int(input('O que mais deseja fazer? '))
+                              print('-' * 30)
+                              if opc == 1:
+                                    funcoes.raiz(a, b)
+                                    input('<enter>')
+                              elif opc == 2:
+                                    x = int(input('Digite o valor de x: '))
+                                    funcoes.choose(a, b, x)
+                                    input('<enter>')
+                              elif opc == 3:
+                                    x = list(range(-10, 11))
+                                    y = [a*valor + b for valor in x]
+                                    funcoes.grafico(x, y)
+                                    input('<enter>')
+                              elif opc == 4:
+                                    break
+                              elif opc > 4 or opc < 1:
+                                    print('Digite uma opção válida.')
 
                   elif ans == 2:
-                        pass
+                        system('cls')
+                        a = float(input('Digite o valor de a: '))
+                        b = float(input('Digite o valor de b: '))
+                        c = float(input('Digite o valor de c: '))
+                        while True:
+                              system('cls')
+                              title('FUNÇÃO 2º GRAU')
+                              print(f'f(x) = {a}x² + {b}x + {c}')
+                              print('-' * 30)
+                              funcoes.opt_seg()
+                              print('-' * 30)
+                              opc = int(input('O que deseja fazer? '))
+                              print('-' * 30)
+                              if opc == 1:
+                                    print(funcoes.baskhara(a, b, c))
+                                    input('<enter>')
+                              elif opc == 2:
+                                    x = int(input('Digite o valor de x: '))
+                                    funcoes.choose_seg(a, b, c, x)
+                                    input('<enter>')
+                              elif opc == 3:
+                                    funcoes.vertice(a, b, c)
+                                    input('<enter>')
                   elif ans == 3:
                         pass
                   elif ans == 4:
                         break
+                  elif ans > 4 or ans < 1:
+                        print('Digite uma opção válida')
 
 
       # matrizes
