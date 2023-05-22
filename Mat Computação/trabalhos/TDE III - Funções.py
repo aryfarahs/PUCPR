@@ -93,10 +93,10 @@ while True:
           '[2] Função do 2º grau\n'
           '[3] Sair')
     print('—'*40)
-    ans = leiaInt(input('O que deseja? '))
+    ans = leiaInt('O que deseja? ')
     if ans == 1:
-        a = leiaFloat(input('Digite o valor de a: '))
-        b = leiaFloat(input('Digite o valor de b: '))
+        a = leiaFloat('Digite o valor de a: ')
+        b = leiaFloat('Digite o valor de b: ')
         print('—'*40)
         primeiro(a, b)
         graf = str(input('Deseja gerar um gráfico? ')).strip().upper()[0]
@@ -106,9 +106,9 @@ while True:
             grafico(x, y)
 
     elif ans == 2:
-        a = leiaFloat(input('Digite o valor de a: '))
-        b = leiaFloat(input('Digite o valor de b: '))
-        c = leiaFloat(input('Digite o valor de c: '))
+        a = leiaFloat('Digite o valor de a: ')
+        b = leiaFloat('Digite o valor de b: ')
+        c = leiaFloat('Digite o valor de c: ')
         print('—'*40)
         print(baskhara(a, b, c))
         vertice(a, b, c)
@@ -124,5 +124,8 @@ while True:
     
     elif ans < 1 or ans > 3:
         print('Digite uma opção válida.')
+        input('<enter>')
 
+print('—'*40)
 print('Obrigado pela preferência!')
+print('—'*40)
