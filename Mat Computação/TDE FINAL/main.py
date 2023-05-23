@@ -14,6 +14,7 @@ from os import system
 from titulo import title
 import conjuntos
 import funcoes
+from mat import leiaFloat, leiaInt
 from numpy import arange
 
 
@@ -24,7 +25,8 @@ while True:
             '[2] Funções\n'
             '[3] Matrizes\n'
             '[4] Sair')
-      choice = int(input('O que deseja analisar? '))
+      print('-' * 30)
+      choice = leiaInt('O que deseja analisar? ')
 
       # operações com conjuntos
       if choice == 1:
@@ -43,7 +45,7 @@ while True:
                   print(f'Conjunto A: {A}' if len(a) != 0 else 'Conjunto A: Ø')
                   print(f'Conjunto B: {B}' if len(b) != 0 else 'Conjunto B: Ø')
                   conjuntos.opt()
-                  ans = int(input('O que deseja ver? '))
+                  ans = leiaInt('O que deseja ver? ')
                   print('-' * 30)
 
                   # resultados
@@ -73,16 +75,14 @@ while True:
                   # tipo da função
                   funcoes.type()
                   print('-' * 30)
-                  ans = int(input('Escolha 1 tipo de função: '))
+                  ans = leiaInt('Escolha 1 tipo de função: ')
                   print('-' * 30)
 
                   # coletando coeficientes
                   if ans == 1:
                         system('cls')
-                        num_a = input('a = ').replace(',', '.')
-                        num_b = input('b = ').replace(',', '.')
-                        a = float(num_a)
-                        b = float(num_b)
+                        a = leiaFloat('a = ')
+                        b = leiaFloat('b = ')
                         print('-' * 30)
                         while True:
                               system('cls')
@@ -92,13 +92,13 @@ while True:
                               print('-' * 30)
                               funcoes.opt_afim()
                               print('-' * 30)
-                              opc = int(input('O que mais deseja fazer? '))
+                              opc = leiaInt('O que mais deseja fazer? ')
                               print('-' * 30)
                               if opc == 1:
                                     funcoes.raiz(a, b)
                                     input('<enter>')
                               elif opc == 2:
-                                    x = int(input('Digite o valor de x: '))
+                                    x = leiaInt('Digite o valor de x: ')
                                     funcoes.choose_afim(a, b, x)
                                     input('<enter>')
                               elif opc == 3:
@@ -127,13 +127,13 @@ while True:
                               print('-' * 30)
                               funcoes.opt_seg()
                               print('-' * 30)
-                              opc = int(input('O que deseja fazer? '))
+                              opc = leiaInt('O que deseja fazer? ')
                               print('-' * 30)
                               if opc == 1:
                                     print(funcoes.baskhara(a, b, c))
                                     input('<enter>')
                               elif opc == 2:
-                                    x = int(input('Digite o valor de x: '))
+                                    x = leiaInt('Digite o valor de x: ')
                                     funcoes.choose_seg(a, b, c, x)
                                     input('<enter>')
                               elif opc == 3:
@@ -162,10 +162,10 @@ while True:
                               print('-' * 30)
                               funcoes.opt_exp()
                               print('-' * 30)
-                              opc = int(input('O que mais deseja fazer? '))
+                              opc = leiaInt('O que mais deseja fazer? ')
                               print('-' * 30)
                               if opc == 1:
-                                    x = int(input('Digite o valor de x: '))
+                                    x = leiaInt('Digite o valor de x: ')
                                     funcoes.choose_exp(a, x)
                                     input('<enter>')
                               elif opc == 2:
