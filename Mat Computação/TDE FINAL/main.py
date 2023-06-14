@@ -70,7 +70,7 @@ while True:
                   elif ans == 5: #voltar
                         break
                   elif ans > 5 or ans < 1: #erro
-                        print('Digite uma opção válida.')
+                        print('\033[1;31mDigite uma opção válida.\033[m')
                         print('-' * 30)
                         input('<enter>')
 
@@ -119,7 +119,7 @@ while True:
                               elif opc == 4: #voltar
                                     break
                               elif opc > 4 or opc < 1: #erro
-                                    print('Digite uma opção válida.')
+                                    print('\033[1;31mDigite uma opção válida.\033[m')
                                     print('-' * 30)
                                     input('<enter>')
 
@@ -161,7 +161,7 @@ while True:
                               elif opc == 5: #voltar
                                     break
                               elif opc > 5 or opc < 1: #erro
-                                    print('Digite uma opção válida')
+                                    print('\033[1;31mDigite uma opção válida\033[m')
                                     print('-' * 30)
                                     input('<enter>')
 
@@ -197,7 +197,7 @@ while True:
                                     break
 
                               elif opc > 3 or opc < 1:#erro
-                                    print('Digite uma opção válida')
+                                    print('\033[1;31mDigite uma opção válida.\033[m')
                                     print('-' * 30)
                                     input('<enter>')
 
@@ -205,7 +205,7 @@ while True:
                         break
 
                   elif ans > 4 or ans < 1: # erro
-                        print('Digite uma opção válida')
+                        print('\033[1;31mDigite uma opção válida\033[m')
                         print('-' * 30)
                         input('<enter>')
 
@@ -233,17 +233,19 @@ while True:
                               if lin == 2: #2x2
                                     det2 = mat[0][0]*mat[1][1] - mat[1][0]* mat[0][1]
                                     print(f'O determinante dessa matriz é {det2}')
+                                    print('-' * 30)
+                                    input('<enter>')
                               elif lin == 3: #3x3
                                     det3 = matriz.det(mat)
                                     print(f'O determinante dessa matriz é {det3}')
                                     print('-' * 30)
                                     input('<enter>')
                               else: # XxX 
-                                    print('OPS! Não consigo calcular o determinante dessa matriz!')
+                                    print('\033[1;34mOPS! Não consigo calcular o determinante dessa matriz!\033[m')
                                     print('-' * 30)
                                     input('<enter>')
                         else: # não quadrada
-                              print('ERRO! A matriz não é quadrara, portanto, não é possivel calcular o determinante.')
+                              print('\033[1;31mERRO! A matriz não é quadrara, portanto, não é possivel calcular o determinante.\033[m')
                               print('-' * 30)
                               input('<enter>')  
                                                       
@@ -275,7 +277,7 @@ while True:
                   
                   # erro
                   elif opc > 4 or opc < 1:
-                        print('Digite uma opção válida')
+                        print('\033[1;31mDigite uma opção válida\033[m')
                         print('-' * 30)
                         input('<enter>')
 
@@ -285,7 +287,7 @@ while True:
 
       # erro
       elif choice < 1 or choice > 4:
-            print('Digite uma escolha válida')
+            print('\033[1;31mDigite uma escolha válida\033[m')
             print('-' * 30)
             input('<enter>')
 
