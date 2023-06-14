@@ -1,23 +1,30 @@
 from os import system
 from titulo import title
+from mat import leiaFloat, leiaInt
 
 def valores(a, b):
     ca = 1
     cb = 1
 
     while True:
-        num_a = input(f'Digite o {ca}º numero do conjunto A ['' para continuar]: ')
+        num_a = input(f'Digite o {ca}º numero do conjunto A [" " para parar]: ')
         if num_a in '':
             break
+        elif num_a.isdigit() == False:
+            print('\033[1;31mERRO! Digite um valor válido.\033[m')
+            continue
         a.append(int(num_a))
         ca += 1
     
     print('-'*40)
     print('CONJUNTO B')
     while True:
-        num_b = input(f'Digite o {cb}º número do conjunto B ['' para continuar]: ')
+        num_b = input(f'Digite o {cb}º número do conjunto B [" " para parar]: ')
         if num_b in '':
             break
+        elif num_b.isdigit() == False:
+            print('\033[1;31mERRO! Digite um valor válido.\033[m')
+            continue
         b.append(int(num_b))
         cb += 1
     print('-'*40)
