@@ -15,9 +15,22 @@ def valid(lin, col):
         return False
 
 
-def mult(mat, mat2, lin, col):
-    pass    
+def mult(mat, mat2, lin, col, col2):
+    m = []
+    for l in range(lin):
+        m.append([])
+        for c in range(col2):
+            m[l].append(0)
+            for k in range(col):
+                m[l][c] += mat[l][k]*mat2[k][c]
+    
+    title('MULTIPLICAÇÃO')
+    for l in range(lin):
+        for c in range(col):
+            print(f'[{m[l][c]:^5}]' , end=' ')
+        print()  
 
+    
 
 def transp(mat, col, lin):
     title('MATRIZ TRANSPOSTA')
@@ -55,13 +68,20 @@ def show(mat: list, lin, col, num=1):
 
 
 if __name__ in '__main__':
+    mat = []
+    mat2 = []
     lin = leiaInt('Linhas: ')
     col = leiaInt('Colunas: ')
-    mat = []
+    lin2 = leiaInt('Linhas: ')
+    col2 = leiaInt('Colunas: ')
     prep(lin, col, mat)
     build(lin, col, mat)
+    prep(lin2, col2, mat2)
+    build(lin2, col2, mat2)
     show(mat, lin, col)
-    print()
-    transp(mat, col, lin)
+    show(mat2, lin2, col2, 2)
+    #transp(mat, col, lin)
+    mult(mat, mat2, lin, col2)
+    
     
     

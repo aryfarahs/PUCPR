@@ -261,7 +261,11 @@ while True:
                         system('cls')
                         matriz.show(mat, lin, col, 1)
                         matriz.show(mat2, lin2, col2, 2)
-                        matriz.mult(mat, mat2, lin, col)
+                        if matriz.valid(col, lin2):
+                              matriz.mult(mat, mat2, lin, col, col2)
+                        else:
+                              print('-' * 30)
+                              print(f'\033[1;31mERRO! As matrizes {lin}x{col} e {lin2}x{col2} não são multiplicáveis!\033[m')
                         print('-' * 30)
                         input('<enter>')
 
