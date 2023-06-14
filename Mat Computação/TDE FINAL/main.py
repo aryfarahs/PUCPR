@@ -260,8 +260,10 @@ while True:
                         matriz.build(lin2, col2, mat2)
                         system('cls')
                         matriz.show(mat, lin, col, 1)
+                        title('x')
                         matriz.show(mat2, lin2, col2, 2)
                         if matriz.valid(col, lin2):
+                              title('=')
                               matriz.mult(mat, mat2, lin, col, col2)
                         else:
                               print('-' * 30)
