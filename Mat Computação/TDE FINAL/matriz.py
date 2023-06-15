@@ -81,7 +81,7 @@ if __name__ in '__main__':
     show(mat, lin, col)
     show(mat2, lin2, col2, 2)
     #transp(mat, col, lin)
-    mult(mat, mat2, lin, col2)
+    mult(mat, mat2, lin, col, col2)
     
     
     
