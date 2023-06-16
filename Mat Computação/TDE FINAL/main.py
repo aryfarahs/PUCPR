@@ -9,7 +9,7 @@ opção do usuário sair.
 Deve-se utilizar funções para cada item a ser calculado, portanto, em cada chamada de
 opção nos meus chame uma função
 '''
-
+from time import sleep
 from os import system
 from titulo import title
 import conjuntos
@@ -260,13 +260,19 @@ while True:
                         matriz.build(lin2, col2, mat2)
                         system('cls')
                         matriz.show(mat, lin, col, 1)
-                        title('x')
+                        print(f'{"-" * 30}')
+                        print(f'{"x":^30}')
                         matriz.show(mat2, lin2, col2, 2)
+                        print(f'{"-" * 30}')
+                        print(f'\033[1;36mMultiplicando as matrizes {lin}x{col} e {lin2}x{col2}...\033[m')
+                        print(f'{"-" * 30}')
+                        sleep(0.7)
                         if matriz.valid(col, lin2):
-                              title('=')
+                              print(f'{"=":^30}')
                               matriz.mult(mat, mat2, lin, lin2, col2)
+                              print(f'{"-" * 30}')
+                              input('<enter>')
                         else:
-                              print('-' * 30)
                               print(f'\033[1;31mERRO! As matrizes {lin}x{col} e {lin2}x{col2} não são multiplicáveis!\033[m')
                         print('-' * 30)
                         input('<enter>')
