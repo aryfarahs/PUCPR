@@ -15,22 +15,25 @@ def valid(lin, col):
         return False
 
 
-def mult(mat, mat2, lin, col, col2):
-    m = []
+def mult(mat, mat2, lin, lin2, col2):
+    M = []
     for l in range(lin):
-        m.append([])
+        M.append( [] )
         for c in range(col2):
-            m[l].append(0)
-            for k in range(col):
-                m[l][c] += mat[l][k]*mat2[k][c]
+            M[l].append(0)
+     
+    for l in range(lin):
+        for c in range(col2):
+            for k in range(lin2):
+                M[l][c] += mat[l][k]*mat2[k][c]
     
     title('MULTIPLICAÇÃO')
     for l in range(lin):
-        for c in range(col):
-            print(f'[{m[l][c]:^5}]' , end=' ')
+        for c in range(col2):
+            print(f'[{M[l][c]:^5}]' , end=' ')
         print()  
 
-    
+
 
 def transp(mat, col, lin):
     title('MATRIZ TRANSPOSTA')
@@ -81,7 +84,7 @@ if __name__ in '__main__':
     show(mat, lin, col)
     show(mat2, lin2, col2, 2)
     #transp(mat, col, lin)
-    mult(mat, mat2, lin, col, col2)
+    mult(mat, mat2, lin, lin2, col2)
     
     
     
