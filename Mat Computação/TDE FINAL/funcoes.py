@@ -90,10 +90,12 @@ def grafico_seg(x, y):
     plt.show()
 
 
-def opt_exp():
-    print('[1] Escolher o x\n'
-          '[2] Gráfico\n'
-          '[3]   <---')
+def opt_exp(a):
+    if a > 0:
+        print('[1] Escolher o x\n'
+            '[2] Gráfico\n'
+            '[3]   <---')
+
     
 
 def direcao_exp(a):

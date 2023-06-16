@@ -175,31 +175,36 @@ while True:
                               print(f'f(x) = {a}**x')
                               funcoes.direcao_exp(a) #cresente/decrescente
                               print('-' * 30)
-                              funcoes.opt_exp() #opções
-                              print('-' * 30)
-                              opc = leiaInt('O que mais deseja fazer? ')
-                              print('-' * 30)
-                              
-                              if opc == 1: #escolha o x
-                                    x = leiaInt('Digite o valor de x: ')
-                                    funcoes.choose_exp(a, x)
+                              funcoes.opt_exp(a) #opções
+                              if a > 0:
                                     print('-' * 30)
-                                    input('<enter>')
-
-                              elif opc == 2: #gráfico
-                                    x = arange(-10, 10, 0.1)
-                                    y = [a**valor for valor in x]
-                                    funcoes.grafico_exp(x, y)
+                                    opc = leiaInt('O que mais deseja fazer? ')
                                     print('-' * 30)
-                                    input('<enter>')
+                                    
+                        
+                                    if opc == 1: #escolha o x
+                                          x = leiaInt('Digite o valor de x: ')
+                                          funcoes.choose_exp(a, x)
+                                          print('-' * 30)
+                                          input('<enter>')
 
-                              elif opc == 3: #voltar
+                                    elif opc == 2: #gráfico
+                                          x = arange(-10, 10, 0.1)
+                                          y = [a**valor for valor in x]
+                                          funcoes.grafico_exp(x, y)
+                                          print('-' * 30)
+                                          input('<enter>')
+
+                                    elif opc == 3: #voltar
+                                          break
+
+                                    elif opc > 3 or opc < 1:#erro
+                                          print('\033[1;31mDigite uma opção válida.\033[m')
+                                          print('-' * 30)
+                                          input('<enter>')
+                              else:
+                                    back = input('<enter>')
                                     break
-
-                              elif opc > 3 or opc < 1:#erro
-                                    print('\033[1;31mDigite uma opção válida.\033[m')
-                                    print('-' * 30)
-                                    input('<enter>')
 
                   elif ans == 4: #voltar
                         break
