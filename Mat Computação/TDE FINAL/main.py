@@ -270,10 +270,9 @@ while True:
                         if matriz.valid(col, lin2):
                               print(f'{"=":^30}')
                               matriz.mult(mat, mat2, lin, lin2, col2)
-                              print(f'{"-" * 30}')
-                              input('<enter>')
                         else:
                               print(f'\033[1;31mERRO! As matrizes {lin}x{col} e {lin2}x{col2} não são multiplicáveis!\033[m')
+                              print(f'Para multiplicarmos uma matriz, o números de linhas da primeira matriz\ndeve ser igual ao número de colunas da segunda, ou seja, Ax\033[1mB\033[m · \033[1mB\033[mxC')
                         print('-' * 30)
                         input('<enter>')
 
