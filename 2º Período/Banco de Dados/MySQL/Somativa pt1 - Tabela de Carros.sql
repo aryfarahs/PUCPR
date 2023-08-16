@@ -21,4 +21,16 @@ VALUES
 (5, 'Chevrolet', 'Camaro', 2013, 782312, 'Amarelo', 'FGC2B76')
 ;
 
+UPDATE Carro
+	SET cor = 'Preto'
+	WHERE CodCarro = 2;
+
+UPDATE Carro
+	SET AnoFabricacao = '2023'
+	WHERE CodCarro = 3;
+    
+DELETE FROM Carro
+	WHERE CodCarro = 4;
+    
 SELECT * FROM Carro;
+
