@@ -18,9 +18,6 @@ function fodaseOnClick() {
     }
 }
 
-function rinicia() {
-    window.location.reload()
-}
 
 
 const ships = [
@@ -37,7 +34,7 @@ let points;
 let endGame;
 
 function resetGame() {
-    life = 10;
+    life = document.querySelector('input[name="vida"]:checked').value;
     points = 0;
     endGame = false;
     random();
@@ -61,11 +58,29 @@ function random() {
 function shipOnClick(indX, indY) {
 
     if (endGame) return;
-    
     const ship = document.getElementById(`ship${indX}${indY}`);
     const type = ships[indX][indY];
     ship.src = getImage(type);
     update_scoreboard(type);
+}
+
+function handleArea9Bomb(indX, indY) {
+    if (endGame) return;
+    document.getElementById(`ship${indX}${indY}`)
+    const type2 = ships[indX+1][indY];
+    const type3 = ships[indX-1][indY];
+    const type4 = ships[indX][indY+1]; 
+    const type5 = ships[indX][indY-1];
+    ship.src = getImage(type);
+    ship.src = getImage(type2);
+    ship.src = getImage(type3);
+    ship.src = getImage(type4);
+    ship.src = getImage(type5);
+    update_scoreboard(type);
+    update_scoreboard(type2);
+    update_scoreboard(type3);
+    update_scoreboard(type4);
+    update_scoreboard(type5);
 }
 
 function getImage(type) {
@@ -85,6 +100,7 @@ function getImage(type) {
     }
     return "images/tile.jpeg";
 }
+
 
 function update_scoreboard(type) {
     points += type;

@@ -23,7 +23,7 @@ h1 {
     width: 400px;
     padding: 20px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -36,7 +36,7 @@ img {
 
 .base {
     margin: auto;
-    margin-top: 7px;
+    margin-top: 5px;
     width: 300px;
     padding: 10px;
     text-align: center;
@@ -61,21 +61,25 @@ footer {
     color: white;
     text-align: center;
     font-size: 30px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .choice {
-    border: #0602ff;
+    background-color: #0602ff;
     border: 2px;
     border-radius: 5px;
-    padding: 20px;
-    margin: 80px;
-    display: flex;
+    margin: 60px;
+    width: auto;
 }
 
 select {
     font-size: 20px;
     padding: 5px;
-    background-color: #0602ff;
+    background-color: #114fff;
     color: white;
+}
+
+.life {
+    padding-left: 80px;
+    padding-right: 80px;
 }

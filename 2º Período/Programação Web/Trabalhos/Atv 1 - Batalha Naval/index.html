@@ -11,12 +11,14 @@
     <h1>Batalha Naval!</h1>
     <button class="botao" onclick="fodaseOnClick()" id="botadas">Iniciar Jogo</button>
     <div class="choice">
-        <h3 style="margin: 5px;">Escolha o tipo de Munição</h3><br>
         <select id="bombType">
             <option value="normal">Tiro</option>
             <option value="area9">Bomba Atômica</option>
             <option value="cross">Bombinha</option>
         </select>
+        <input type="radio" name="vida" value="3" class="life">3
+        <input type="radio" name="vida" value="5" class="life">5
+        <input type="radio" name="vida" value="7" class="life">7
     </div>
     <table cellspacing="0" cellpading="0" id="tabeladas">
         <script>tabela()</script>
