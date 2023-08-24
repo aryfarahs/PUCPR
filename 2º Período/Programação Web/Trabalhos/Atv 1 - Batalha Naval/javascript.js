@@ -40,7 +40,6 @@ function resetGame() {
     random();
 }
 
-
 function random() {
     for(i=0; i<1000; i++) {
         i1 = Math.floor(Math.random() * 5)
