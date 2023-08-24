@@ -8,14 +8,13 @@ body {
 }
 
 table {
-    width: 400px;
+    width: 60px;
     display: flex;
     margin: auto;
     padding: 0px;
     justify-content: center;
 
 }
-
 
 h1 {
     background-color: #0602ff;
@@ -30,7 +29,53 @@ h1 {
 }
 
 img {
-    width: 80px;
+    width: 60px;
     margin: 0px;
     padding: 0px;
+}
+
+.base {
+    margin: auto;
+    margin-top: 7px;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    background-color: #0602ff;
+    color: white;
+    font-size: 20px;
+}
+
+.botao {
+    font-size: 28px;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+}
+
+table {
+    visibility: hidden;
+}
+
+footer {
+    background-color: #0602ff;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.choice {
+    border: #0602ff;
+    border: 2px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 80px;
+    display: flex;
+}
+
+select {
+    font-size: 20px;
+    padding: 5px;
+    background-color: #0602ff;
+    color: white;
 }

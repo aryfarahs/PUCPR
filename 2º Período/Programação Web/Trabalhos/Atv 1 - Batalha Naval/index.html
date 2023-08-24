@@ -9,8 +9,24 @@
 </head>
 <body>
     <h1>Batalha Naval!</h1>
-    <table cellspacing="0" cellpading="0">
+    <button class="botao" onclick="fodaseOnClick()" id="botadas">Iniciar Jogo</button>
+    <div class="choice">
+        <h3 style="margin: 5px;">Escolha o tipo de Munição</h3><br>
+        <select id="bombType">
+            <option value="normal">Tiro</option>
+            <option value="area9">Bomba Atômica</option>
+            <option value="cross">Bombinha</option>
+        </select>
+    </div>
+    <table cellspacing="0" cellpading="0" id="tabeladas">
         <script>tabela()</script>
+        <tr>
+            <td colspan="12" class="base"><div id="divScoreboard">Pontos: 0 - Vidas: 10</div></td>
+        </tr>
     </table>
+    <script>resetGame()</script>
+    <footer>
+        Ary Farah - Adriano Vale - Bruno Martins
+    </footer>
 </body>
 </html>
