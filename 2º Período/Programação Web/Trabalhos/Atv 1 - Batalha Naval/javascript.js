@@ -32,9 +32,11 @@ const ships = [
 let life;
 let points;
 let endGame;
+const selectAmmo = document.getElementById("selectAmmo")
+let ammoCount = [0, 2, 1]
 
 function resetGame() {
-    life = document.querySelector('input[name="vida"]:checked').value;
+    life = 5;
     points = 0;
     endGame = false;
     random();
@@ -52,7 +54,21 @@ function random() {
     }
 }
 
-
+function verificarVidas(selecionar) {
+    const vidas = document.getElementsByName("vida");
+    if (selecionar) {
+        for (var i = 0; i < vidas.length; i++) {
+            if (vidas[i].checked) {
+                life = vidas[i].value;
+            }
+            vidas[i].disabled = true;
+        }
+    } else {
+        for (var i = 0; i < vidas.length; i++) {
+            vidas[i].disabled = false;
+        }
+    }
+}
 
 function shipOnClick(indX, indY) {
 
@@ -63,23 +79,23 @@ function shipOnClick(indX, indY) {
     update_scoreboard(type);
 }
 
-function handleArea9Bomb(indX, indY) {
-    if (endGame) return;
-    document.getElementById(`ship${indX}${indY}`)
-    const type2 = ships[indX+1][indY];
-    const type3 = ships[indX-1][indY];
-    const type4 = ships[indX][indY+1]; 
-    const type5 = ships[indX][indY-1];
-    ship.src = getImage(type);
-    ship.src = getImage(type2);
-    ship.src = getImage(type3);
-    ship.src = getImage(type4);
-    ship.src = getImage(type5);
-    update_scoreboard(type);
-    update_scoreboard(type2);
-    update_scoreboard(type3);
-    update_scoreboard(type4);
-    update_scoreboard(type5);
+function ammoImpact(corX, corY, ammoType) {
+    let totalType = 0;
+    totalType += attackCell(corX, corY)
+    if (ammoType == 1 || ammoType == 2) {
+        totalType += attackCell(corX - 1, corY)
+        totalType += attackCell(corX + 1, corY)
+        totalType += attackCell(corX, corY - 1)
+        totalType += attackCell(corX, corY + 1)
+        if (ammoType == 2) {
+            totalType += attackCell(corX - 1, corY - 1)
+            totalType += attackCell(corX + 1, corY - 1)
+            totalType += attackCell(corX - 1, corY + 1)
+            totalType += attackCell(corX + 1, corY + 1)
+        }
+    }
+
+    update_scoreboard(totalType);
 }
 
 function getImage(type) {
