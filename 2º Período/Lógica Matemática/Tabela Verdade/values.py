@@ -15,5 +15,5 @@ def var(quant):
         s = ['V','F','V','F','V','F','V','F','V','F','V','F','V','F','V','F']
 
 
-def and_funct(p, q, r='', s=''):
+def equal(p, q, r='', s=''):
     print('')
