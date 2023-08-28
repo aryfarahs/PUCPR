@@ -1,7 +1,7 @@
 from values import *
 from time import sleep
 
-quant = int(input('Quantas varáveis vai utilizar (1-4)? '))
+exp = int(input('Digite a expressão: '))
 
-print('Montando sua tabela verdade...')
+print('Calculando...')
 sleep(2)
