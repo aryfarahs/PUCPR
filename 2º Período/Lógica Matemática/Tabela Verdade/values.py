@@ -15,5 +15,29 @@ def var(quant):
         s = ['V','F','V','F','V','F','V','F','V','F','V','F','V','F','V','F']
 
 
-def equal(p, q, r='', s=''):
-    print('')
+def negacao(p, q='', r='', s=''):
+    pass
+
+
+def conjuncao(p, q='', r='', s=''):
+    pass
+
+
+def disjuncao(p, q='', r='', s=''):
+    pass
+
+
+def implicacao(p, q='', r='', s=''):
+    pass
+
+
+def bicondiciocal(p, q='', r='', s=''):
+    pass
+
+
+def nand(p, q='', r='', s=''):
+    pass
+
+
+def nor(p, q='', r='', s=''):
+    pass
