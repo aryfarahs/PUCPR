@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: bisque;
+}
+
+.title {
+    background-image: linear-gradient(red, rgb(244, 101, 124));
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    margin: auto;
+}
