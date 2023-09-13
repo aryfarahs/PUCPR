@@ -85,8 +85,42 @@ VALUES (2020, 1, 2, 1);
 INSERT INTO Turma (ano, semestre, id_prof, id_discip)
 VALUES (2020, 2, 4, 2);
 
+SELECT *
+FROM Turma, Professor, Disciplina;
+
+SELECT *
+FROM Turma AS  t, Professor AS p, Disciplina AS d
+WHERE t.id_discip = d.id_discip AND p.id_prof = t.id_prof;
+
+SELECT t.ano, t.semestre, p.nome, d.nome
+FROM Turma AS  t, Professor AS p, Disciplina AS d
+WHERE t.id_discip = d.id_discip AND
+	  p.id_prof = t.id_prof AND
+      t.semestre = 1;
+
+SELECT t.ano, t.semestre, p.nome, d.nome
+FROM Turma AS  t, Professor AS p, Disciplina AS d
+WHERE t.id_discip = d.id_discip AND p.id_prof = t.id_prof
+ORDER BY t.ano ASC, t.semestre DESC;
+
+SELECT  p.nome, d.nome, t.ano
+FROM Turma AS  t, Professor AS p, Disciplina AS d
+WHERE t.id_discip = d.id_discip AND
+	  p.id_prof = t.id_prof AND
+      p.nome LIKE 'j%';
+
 SELECT * FROM Turma;
 
+CREATE TABLE Colaborador (
+id_emp	INT 		NOT NULL CONSTRAINT PK_emp PRIMARY KEY ,CONSTRAINT ID_val CHECK (id_emp BETWEEN 0 AND 1000),
+nome 	VARCHAR(50) NOT NULL,
+salario FLOAT		NOT NULL CONSTRAINT SL_val CHECK (salario >= 1000));
 
-       
+INSERT INTO Colaborador 
+VALUES (2000, 'Josué', 1500.56);
 
+INSERT INTO Colaborador (id_emp, salario)
+VALUES (300, 3500.56);
+
+INSERT INTO Colaborador 
+VALUES (400, 'Antônio', 350.56);
