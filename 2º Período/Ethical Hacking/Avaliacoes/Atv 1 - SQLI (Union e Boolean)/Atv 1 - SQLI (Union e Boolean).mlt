@@ -1,0 +1,381 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.19.0" title="Shotcut version 23.07.29" producer="main_bin">
+  <profile description="automatic" width="1920" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="25" frame_rate_den="1" colorspace="709"/>
+  <playlist id="main_bin" title="Shotcut version 23.07.29">
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="xml_retain">1</property>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:09:23.480">
+    <property name="length">00:09:23.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:09:23.480"/>
+  </playlist>
+  <producer id="producer0" in="00:00:00.000" out="03:59:59.960">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/65D141290A7DE8A5C5AD8C972E8E6EFF/Imagem do WhatsApp de 2023-09-17 à(s) 16.44.05.jpg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="shotcut:caption">Imagem do WhatsApp de 2023-09-17 à(s) 16.44.05.jpg</property>
+    <property name="shotcut:hash">2e062291e04b33a6ef5ef6c17df73741</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter0" out="00:00:03.960">
+      <property name="argument">SQL Injection
+Union Based</property>
+      <property name="geometry">412 213 1053 556 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">540</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">0</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+    </filter>
+    <filter id="filter1" out="00:00:03.960">
+      <property name="start">1</property>
+      <property name="level">00:00:02.920=1;00:00:03.960=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">27</property>
+    </filter>
+    <filter id="filter2" out="00:00:03.960">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:02.920=0;00:00:03.960=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">27</property>
+    </filter>
+  </producer>
+  <chain id="chain0" out="00:11:10.480">
+    <property name="length">00:11:10.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/UNION-BASED-DVWA.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:30:31</property>
+    <property name="shotcut:caption">UNION-BASED-DVWA.mp4</property>
+    <property name="shotcut:hash">e8df2d8e7f84b5c30473fa12828f7be1</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter3" in="00:00:46.840" out="00:00:48.720">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.720=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">19</property>
+    </filter>
+  </chain>
+  <chain id="chain1" out="00:11:10.480">
+    <property name="length">00:11:10.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/UNION-BASED-DVWA.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:30:31</property>
+    <property name="shotcut:caption">UNION-BASED-DVWA.mp4</property>
+    <property name="shotcut:hash">e8df2d8e7f84b5c30473fa12828f7be1</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain2" out="00:11:10.480">
+    <property name="length">00:11:10.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/UNION-BASED-DVWA.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:30:31</property>
+    <property name="shotcut:caption">UNION-BASED-DVWA.mp4</property>
+    <property name="shotcut:hash">e8df2d8e7f84b5c30473fa12828f7be1</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain3" out="00:11:10.480">
+    <property name="length">00:11:10.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/UNION-BASED-DVWA.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:30:31</property>
+    <property name="shotcut:caption">UNION-BASED-DVWA.mp4</property>
+    <property name="shotcut:hash">e8df2d8e7f84b5c30473fa12828f7be1</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain4" out="00:11:10.480">
+    <property name="length">00:11:10.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/UNION-BASED-DVWA.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:30:31</property>
+    <property name="shotcut:caption">UNION-BASED-DVWA.mp4</property>
+    <property name="shotcut:hash">e8df2d8e7f84b5c30473fa12828f7be1</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain5" out="00:11:10.480">
+    <property name="length">00:11:10.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/UNION-BASED-DVWA.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:30:31</property>
+    <property name="shotcut:caption">UNION-BASED-DVWA.mp4</property>
+    <property name="shotcut:hash">e8df2d8e7f84b5c30473fa12828f7be1</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain6" out="00:11:10.480">
+    <property name="length">00:11:10.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/UNION-BASED-DVWA.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:30:31</property>
+    <property name="shotcut:caption">UNION-BASED-DVWA.mp4</property>
+    <property name="shotcut:hash">e8df2d8e7f84b5c30473fa12828f7be1</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain7" out="00:11:10.480">
+    <property name="length">00:11:10.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/UNION-BASED-DVWA.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:30:31</property>
+    <property name="shotcut:caption">UNION-BASED-DVWA.mp4</property>
+    <property name="shotcut:hash">e8df2d8e7f84b5c30473fa12828f7be1</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain8" out="00:11:10.480">
+    <property name="length">00:11:10.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/UNION-BASED-DVWA.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:30:31</property>
+    <property name="shotcut:caption">UNION-BASED-DVWA.mp4</property>
+    <property name="shotcut:hash">e8df2d8e7f84b5c30473fa12828f7be1</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter4" in="00:09:10.400" out="00:09:13.360">
+      <property name="start">1</property>
+      <property name="level">00:00:01.720=1;00:00:02.960=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">32</property>
+    </filter>
+  </chain>
+  <producer id="producer1" in="00:00:00.000" out="03:59:59.960">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/65D141290A7DE8A5C5AD8C972E8E6EFF/Imagem do WhatsApp de 2023-09-17 à(s) 16.44.05.jpg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="shotcut:caption">Imagem do WhatsApp de 2023-09-17 à(s) 16.44.05.jpg</property>
+    <property name="shotcut:hash">2e062291e04b33a6ef5ef6c17df73741</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter5" out="00:00:03.960">
+      <property name="argument">SQL Injection
+Boolean Based</property>
+      <property name="geometry">337 154 1252 661 1</property>
+      <property name="family">Verdana</property>
+      <property name="size">540</property>
+      <property name="weight">400</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ffffffff</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#aa000000</property>
+      <property name="pad">0</property>
+      <property name="halign">center</property>
+      <property name="valign">bottom</property>
+      <property name="outline">3</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+      <property name="shotcut:usePointSize">0</property>
+      <property name="shotcut:animIn">00:00:00.000</property>
+      <property name="shotcut:animOut">00:00:00.000</property>
+    </filter>
+    <filter id="filter6" out="00:00:03.960">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.360=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">10</property>
+    </filter>
+    <filter id="filter7" out="00:00:03.960">
+      <property name="start">1</property>
+      <property name="level">00:00:02.560=1;00:00:03.960=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">36</property>
+    </filter>
+    <filter id="filter8" out="00:00:03.960">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.360=0</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">10</property>
+    </filter>
+    <filter id="filter9" out="00:00:03.960">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:02.560=0;00:00:03.960=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">36</property>
+    </filter>
+  </producer>
+  <chain id="chain9" out="00:01:38.160">
+    <property name="length">00:01:38.200</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/Bypass-Login-Boolean-Based.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:35:38</property>
+    <property name="shotcut:caption">Bypass-Login-Boolean-Based.mp4</property>
+    <property name="shotcut:hash">6b900c3d2d48a42de72e0e7f9041c290</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter10" in="00:00:29.480" out="00:01:06.640">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.840=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">22</property>
+    </filter>
+  </chain>
+  <chain id="chain10" out="00:01:38.160">
+    <property name="length">00:01:38.200</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/Bypass-Login-Boolean-Based.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:35:38</property>
+    <property name="shotcut:caption">Bypass-Login-Boolean-Based.mp4</property>
+    <property name="shotcut:hash">6b900c3d2d48a42de72e0e7f9041c290</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter11" in="00:01:08.440" out="00:01:36.280">
+      <property name="start">1</property>
+      <property name="level">00:00:26.320=1;00:00:27.840=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">39</property>
+    </filter>
+  </chain>
+  <chain id="chain11" out="00:11:10.480">
+    <property name="length">00:11:10.520</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/Videos/Gravacoes Linux/UNION-BASED-DVWA.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">-1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2023-09-17T19:30:31</property>
+    <property name="shotcut:caption">UNION-BASED-DVWA.mp4</property>
+    <property name="shotcut:hash">e8df2d8e7f84b5c30473fa12828f7be1</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer0" in="00:00:00.000" out="00:00:03.960"/>
+    <entry producer="chain0" in="00:00:46.840" out="00:00:48.720"/>
+    <entry producer="chain1" in="00:00:48.760" out="00:02:14.920"/>
+    <entry producer="chain2" in="00:02:42.760" out="00:03:15.880"/>
+    <entry producer="chain3" in="00:03:20.320" out="00:03:46.760"/>
+    <entry producer="chain4" in="00:03:46.800" out="00:03:53.160"/>
+    <entry producer="chain5" in="00:03:59.840" out="00:07:05.000"/>
+    <entry producer="chain6" in="00:07:14.360" out="00:07:20.440"/>
+    <entry producer="chain7" in="00:07:29.760" out="00:08:03.880"/>
+    <entry producer="chain8" in="00:09:10.400" out="00:09:13.360"/>
+    <entry producer="producer1" in="00:00:00.000" out="00:00:03.960"/>
+    <entry producer="chain9" in="00:00:29.480" out="00:01:06.640"/>
+    <entry producer="chain10" in="00:01:08.440" out="00:01:36.280"/>
+    <blank length="00:00:43.080"/>
+    <entry producer="chain11" in="00:10:05.800" out="00:11:10.480"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 23.07.29" in="00:00:00.000" out="00:09:23.480">
+    <property name="shotcut">1</property>
+    <property name="shotcut:scaleFactor">0.763571</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.1</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">1</property>
+    </transition>
+  </tractor>
+</mlt>
