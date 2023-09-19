@@ -52,3 +52,49 @@ UNION
 FROM (Empregado AS E RIGHT OUTER JOIN EmpSkill AS ES ON (E.ID_emp = ES.ID_emp))
 RIGHT OUTER JOIN Skill AS S ON (S.ID_skill = ES.ID_skill))
 ORDER BY nivel;
+
+
+SELECT E.ID_emp, E.nome
+FROM Empregado AS E JOIN Departamento AS D
+ON (E.ID_depto = D.ID_depto) WHERE D.sigla = 'CTB' OR D.sigla ='VND'
+ORDER BY E.nome;
+
+SELECT E.ID_emp, E.nome
+FROM Empregado AS E WHERE E.ID_depto IN
+(SELECT D.ID_depto
+FROM Departamento AS D
+WHERE D.sigla = 'CTB' OR D.sigla ='VND')
+ORDER BY E.nome;
+
+
+
+SELECT E.ID_depto, E.ID_emp, E.nome FROM Empregado AS E
+WHERE E.ID_depto NOT IN
+(SELECT D.ID_depto
+FROM Departamento AS D
+WHERE D.sigla = 'CTB' OR D.sigla ='VND')
+ORDER BY E.nome;
+
+SELECT E.ID_depto, E.ID_emp, E.nome FROM Empregado AS E
+WHERE E.ID_depto <> ALL
+(SELECT D.ID_depto
+FROM Departamento AS D
+WHERE D.sigla = 'CTB' OR D.sigla ='VND')
+ORDER BY E.nome;
+
+
+SELECT E.ID_depto, E.ID_emp, E.nome, E.dt_nascimento
+FROM Empregado AS E
+WHERE YEAR(E.dt_nascimento) >= 1998 AND E.ID_depto IN
+(SELECT D.ID_depto
+FROM Departamento AS D, Empregado AS E1
+WHERE D.ID_depto = E1.ID_depto AND (D.sigla = 'CTB' OR D.sigla ='VND'))
+ORDER BY E.nome;
+
+SELECT E.ID_depto, E.ID_emp, E.nome, E.dt_nascimento
+FROM Empregado AS E
+WHERE E.ID_depto = ANY
+(SELECT D.ID_depto FROM Departamento AS D, Empregado AS E1
+WHERE D.ID_depto = E1.ID_depto AND (D.sigla = 'CTB' OR D.sigla ='VND'))
+AND YEAR(E.dt_nascimento) >= 1998
+ORDER BY E.nome;
