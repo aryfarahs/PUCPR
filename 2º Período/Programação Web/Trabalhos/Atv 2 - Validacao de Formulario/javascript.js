@@ -5,7 +5,7 @@ const nameInput = document.getElementById("name")
 const cpfInput = document.getElementById("cpf")
 const birthInput = document.getElementById("birth")
 const streetInput = document.getElementById("street")
-const cepInput = document.getElementById("cpf")
+const cepInput = document.getElementById("cep")
 const cityInput = document.getElementById("city")
 const stateInput = document.getElementById("state")
 const phoneInput = document.getElementById("phone")
@@ -23,13 +23,11 @@ form.addEventListener("submit", (event) => {
     }
 
     // cpf
-    if (cpfInput.value.length !== 11 || cpfInput.value === !isCpfValid(cpfInput.value)) {
+    formatarCpf(cpfInput);
+    if (cpfInput.value === "" || !isCpfValid(cpfInput.value)) {
         alert('CPF Inválido');
         return;
-    } else {
-       //formatarCpf(cpfInput);
     }
-
     // rua
     if (streetInput.value === "" || !isNameValid(streetInput.value)) {
         alert("Preencha o campo 'Rua' corretamente (apenas letras)")
@@ -37,11 +35,10 @@ form.addEventListener("submit", (event) => {
     } 
 
     // cep
-    if (cepInput.value !== 8 || cepInput.value === !isCepValid(cepInput.value)) {
+    formatarCep(cepInput)
+    if (cepInput.value.length === ""|| !isCepValid(cepInput.value)) {
         alert('CEP Inválido!')
         return;
-    } else {
-        formatarCep(cepInput)
     }
 
     // cidade
@@ -51,15 +48,17 @@ form.addEventListener("submit", (event) => {
     }
 
     // estado
-    if (stateInput.value.length !== 2 || stateInput.value === !isStateValid(stateInput.value)) {
+    formatState(stateInput)
+    if (stateInput.value === "" || !isStateValid(stateInput.value)) {
         alert("Preencha o campo 'Estado' apenas com a silga")
         return;
-    } else {
-        stateInput.value.toUpperCase();
     }
 
     // telefone
-
+    if (phoneInput.value === "" || !isPhoneValid(phoneInput.value)) {
+        alert("Preencha o campo 'Telefone' corretamente (apenas números)")
+        return;
+    }
 
     //email
 
@@ -122,5 +121,23 @@ function isStateValid(stateInput) {
     } return false;
 }
 
-// VALIDANDO TELEFONE
+function formatState(stateInput) {
+    const stateSig = stateInput.value.toUpperCase();
+    stateInput.value = stateSig
+    return stateInput.value;
+}
 
+// VALIDANDO TELEFONE
+function isPhoneValid(phoneInput) {
+    const phoneRegex = new RegExp(
+        /^(\d{2})\s9\d{4}-\d{4}$/
+    )
+    if (phoneRegex.test(phoneInput)) {
+        return true;
+    } return false;
+}
+
+
+function formatPhone(phoneInput) {
+    
+}
