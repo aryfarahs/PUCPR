@@ -28,6 +28,13 @@ form.addEventListener("submit", (event) => {
         alert('CPF Inválido');
         return;
     }
+
+    // data de nascimento
+    if (birthInput === "") {
+        alert("Campo 'Data de Nascimento' obrigatório")
+        return;
+    }
+
     // rua
     if (streetInput.value === "" || !isNameValid(streetInput.value)) {
         alert("Preencha o campo 'Rua' corretamente (apenas letras)")
@@ -55,13 +62,17 @@ form.addEventListener("submit", (event) => {
     }
 
     // telefone
+    formatPhone(phoneInput)
     if (phoneInput.value === "" || !isPhoneValid(phoneInput.value)) {
         alert("Preencha o campo 'Telefone' corretamente (apenas números)")
         return;
     }
 
     //email
-
+    if (emailInput.value === "" || !isEmailValid(emailInput.value)) {
+        alert("Preencha o campo 'E-mail' corretamente")
+        return;
+    }
 
     // caso tudo esteja certo:
     form.submit();
@@ -130,7 +141,7 @@ function formatState(stateInput) {
 // VALIDANDO TELEFONE
 function isPhoneValid(phoneInput) {
     const phoneRegex = new RegExp(
-        /^(\d{2})\s9\d{4}-\d{4}$/
+        /^\(\d{2}\) \d{5}-\d{4}$/
     )
     if (phoneRegex.test(phoneInput)) {
         return true;
@@ -139,5 +150,18 @@ function isPhoneValid(phoneInput) {
 
 
 function formatPhone(phoneInput) {
-    
+    const tiraNum = phoneInput.value.replace(/\D/g, '')
+    const numPronto = '(' + tiraNum.substring(0,2) + ')' + ' ' + tiraNum.substring(2, 7) + '-' + tiraNum.substring(7, 11);
+    phoneInput.value = numPronto
+    return phoneInput.value;
+}
+
+// VALIDANDO EMAIL
+function isEmailValid(emailInput) {
+    const emailRegex = new RegExp(
+        /^[\w\.-]+@[\w\.-]+\.[a-zA-Z]{2,}$/
+    );
+    if (emailRegex.test(emailInput)) {
+        return true;
+    } return false;
 }
