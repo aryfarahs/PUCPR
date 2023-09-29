@@ -98,3 +98,32 @@ WHERE E.ID_depto = ANY
 WHERE D.ID_depto = E1.ID_depto AND (D.sigla = 'CTB' OR D.sigla ='VND'))
 AND YEAR(E.dt_nascimento) >= 1998
 ORDER BY E.nome;
+
+
+DROP VIEW IF EXISTS CompetenciasEmpregados;
+
+CREATE VIEW CompetenciasEmpregados AS (
+SELECT D.sigla AS Depto, S.nome AS Competencia, ES.nivel AS Nivel, E.nome AS Empregado
+FROM ((Empregado AS E INNER JOIN EmpSkill AS ES ON (E.ID_emp = ES.ID_emp)) 
+INNER JOIN Skill AS S ON (S.ID_skill = ES.ID_skill)) 
+INNER JOIN Departamento AS D ON (D.ID_depto = E.ID_depto));
+
+SELECT * FROM CompetenciasEmpregados
+ORDER BY Depto, Competencia, Empregado;
+
+
+SELECT
+COUNT(*) AS 'Número de Empregados',
+AVG(salario) AS 'Salário Médio',
+MIN(salario) AS 'Menor Salário' ,
+MAX(salario) AS 'Maior Salário' ,
+SUM(salario) AS 'Total Salários'
+FROM Empregado;
+
+SELECT
+COUNT(*) AS 'Número de Empregados',
+CONVERT(AVG(salario), DECIMAL(8,2)) AS 'Salário Médio',
+MIN(salario) AS 'Menor Salário' ,
+MAX(salario) AS 'Maior Salário' ,
+SUM(salario) AS 'Total Salários'
+FROM Empregado;
