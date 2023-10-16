@@ -98,6 +98,72 @@ INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('José', '1956-09-08', 1)
 INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Maria', '1975-04-18', 2);
 INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Antônia', '1954-12-10', 3);
 INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Armínio', '1976-07-28', 5);
-INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Luiza', '1945-11-09', 5);
+INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Luiza', '1945-11-09', 6);
 
 -- f)
+SELECT * FROM Editora;
+SELECT * FROM Autor;
+
+UPDATE Editora
+SET ID_edit = 50
+WHERE ID_edit = 5;
+
+SELECT * FROM Editora;
+SELECT * FROM Autor;
+
+
+-- g)
+SELECT * FROM Editora;
+SELECT * FROM Autor;
+
+DELETE FROM Editora
+WHERE ID_edit = 1;
+
+SELECT * FROM Editora;
+SELECT * FROM Autor;
+
+-- h)
+UPDATE Editora
+ SET ID_edit = 5
+ WHERE ID_edit = 50;
+ 
+DROP TABLE Autor;
+CREATE TABLE Autor (
+	ID_Autor INT AUTO_INCREMENT PRIMARY KEY, -- Tabela FILHO
+	Nome_Autor VARCHAR(60) NOT NULL,
+	Dt_Nasc DATE NOT NULL,
+	fk_ID_Edit INT NULL
+);
+
+ALTER TABLE Autor ADD CONSTRAINT FK_Autor_Editora FOREIGN KEY(fk_ID_edit)
+REFERENCES Editora (ID_edit)
+ON UPDATE SET NULL
+ON DELETE SET NULL;
+
+ALTER TABLE Autor AUTO_INCREMENT = 100; -- Seed = 100 (início do AUTO_INCREMENT)
+INSERT Autor (Nome_Autor, Dt_Nasc) VALUES ('José', '1956-09-08');
+INSERT Autor (Nome_Autor, Dt_Nasc) VALUES ('Maria', '1975-04-18');
+INSERT Autor (Nome_Autor, Dt_Nasc) VALUES ('Antônia', '1954-12-10');
+INSERT Autor (Nome_Autor, Dt_Nasc) VALUES ('Armínio', '1976-07-28');
+INSERT Autor (Nome_Autor, Dt_Nasc) VALUES ('Luiza', '1945-11-09');
+
+-- i)
+SELECT * FROM Editora;
+SELECT * FROM Autor;
+
+UPDATE Editora
+SET ID_edit = 50
+WHERE ID_edit = 5;
+
+SELECT * FROM Editora;
+SELECT * FROM Autor;
+
+-- j)
+SELECT * FROM Editora;
+SELECT * FROM Autor;
+
+DELETE FROM Editora
+WHERE ID_edit = 1;
+
+SELECT * FROM Editora;
+SELECT * FROM Autor;
