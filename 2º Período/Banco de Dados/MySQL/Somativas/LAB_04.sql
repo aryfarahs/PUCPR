@@ -124,15 +124,15 @@ SELECT * FROM Autor;
 
 -- h)
 UPDATE Editora
- SET ID_edit = 5
- WHERE ID_edit = 50;
- 
+SET ID_edit = 5
+WHERE ID_edit = 50;
+
 DROP TABLE Autor;
 CREATE TABLE Autor (
-	ID_Autor INT AUTO_INCREMENT PRIMARY KEY, -- Tabela FILHO
-	Nome_Autor VARCHAR(60) NOT NULL,
-	Dt_Nasc DATE NOT NULL,
-	fk_ID_Edit INT NULL
+ID_Autor INT AUTO_INCREMENT PRIMARY KEY, -- Tabela FILHO
+Nome_Autor VARCHAR(60) NOT NULL,
+Dt_Nasc DATE NOT NULL,
+fk_ID_Edit INT NULL
 );
 
 ALTER TABLE Autor ADD CONSTRAINT FK_Autor_Editora FOREIGN KEY(fk_ID_edit)
@@ -141,11 +141,12 @@ ON UPDATE SET NULL
 ON DELETE SET NULL;
 
 ALTER TABLE Autor AUTO_INCREMENT = 100; -- Seed = 100 (início do AUTO_INCREMENT)
-INSERT Autor (Nome_Autor, Dt_Nasc) VALUES ('José', '1956-09-08');
-INSERT Autor (Nome_Autor, Dt_Nasc) VALUES ('Maria', '1975-04-18');
-INSERT Autor (Nome_Autor, Dt_Nasc) VALUES ('Antônia', '1954-12-10');
-INSERT Autor (Nome_Autor, Dt_Nasc) VALUES ('Armínio', '1976-07-28');
-INSERT Autor (Nome_Autor, Dt_Nasc) VALUES ('Luiza', '1945-11-09');
+
+INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('José', '1956-09-08', 1);
+INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Maria', '1975-04-18', 2);
+INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Antônia', '1954-12-10', 3);
+INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Armínio', '1976-07-28', 5);
+INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Luiza', '1945-11-09', 5);
 
 -- i)
 SELECT * FROM Editora;
@@ -167,3 +168,125 @@ WHERE ID_edit = 1;
 
 SELECT * FROM Editora;
 SELECT * FROM Autor;
+
+
+-- 4.3
+-- a)
+CREATE TABLE Tab_Um (
+ID_um INT PRIMARY KEY NOT NULL,
+col_1 CHAR(3) NOT NULL
+);
+
+CREATE TABLE Tab_Dois (
+fk_ID_um INT PRIMARY KEY NOT NULL,
+col_2 CHAR(3) NOT NULL,
+FOREIGN KEY (FK_ID_um)
+REFERENCES Tab_Um (ID_um)
+);
+
+CREATE VIEW JuntaUmDois AS (
+SELECT ID_um, col_1, fk_ID_um, col_2
+FROM Tab_Um JOIN Tab_Dois
+ON (Tab_Um.ID_um = Tab_Dois.fk_ID_um)
+);
+
+--------------------------------------------------------------------------------------
+
+-- b) 
+
+-- 1º. INSERT
+INSERT Tab_Um (ID_um, col_1) VALUES (5, 'AAA');
+SELECT * FROM JuntaUmDois;
+SELECT * FROM Tab_Um;
+SELECT * FROM Tab_Dois;
+
+-- 2º. INSERT
+INSERT Tab_Dois(fk_ID_um, col_2) VALUES (5, 'XXX');
+SELECT * FROM JuntaUmDois;
+SELECT * FROM Tab_Um;
+SELECT * FROM Tab_Dois;
+
+-- c)
+-- 1º. INSERT
+INSERT JuntaUmDois (ID_Um, col_1) VALUES (10, 'BBB');
+SELECT * FROM JuntaUmDois;
+SELECT * FROM Tab_Um;
+SELECT * FROM Tab_Dois;
+
+-- 2º. INSERT
+INSERT JuntaUmDois(fk_ID_um, col_2) VALUES (10, 'YYY');
+SELECT * FROM JuntaUmDois;
+SELECT * FROM Tab_Um;
+SELECT * FROM Tab_Dois;
+
+-- 4.4
+-- a)
+CREATE TABLE Empresa (
+ID INT PRIMARY KEY AUTO_INCREMENT,
+Nome VARCHAR(20),
+Atuacao VARCHAR(50),
+Cidade VARCHAR(20),
+Estado VARCHAR(2)
+);
+
+INSERT Empresa (Nome, Atuacao, Cidade, Estado) VALUES
+('ACME Corp.','Cartoons','São Paulo','SP'),
+('Estrela Ltda.', 'Transporte passageiros','Campinas','SP'),
+('Aurora','Panificadora','Belo Horizonte','MG'),
+('Azul','Aviação','São Paulo','SP'),
+('Leão Ltda.','Bebidas','Curitiba','PR'),
+('Petit S.A.','Queijos e frios', 'Uberlândia','MG'),
+('Barreados Corp.','Alimentos congelados','Morretes','PR');
+
+SELECT * FROM Empresa;
+
+-- b)
+CREATE TABLE Estoque (
+ID INT PRIMARY KEY AUTO_INCREMENT,
+Nome VARCHAR(20),
+Qtde INT DEFAULT 10,
+ValUnit DECIMAL(10,2)
+);
+
+INSERT Estoque (Nome, Qtde, ValUnit) VALUES
+('caderno',200,15.00),
+('borracha',50,6.50),
+('caneta',300, 5.50),
+('régua 30cm',80, 10.00),
+('lápis',500, 4.00),
+('bloco A4',35, 18.45);
+
+SELECT * FROM Estoque;
+
+-- c)
+SET @nome_produto = 'none'; -- Declara e inicializa variáveis de sessão
+SET @total_produtos = -1;
+
+SELECT nome INTO @nome_produto FROM Estoque
+WHERE ID = 3;
+
+SELECT COUNT(*) INTO @total_produtos FROM Estoque;
+
+SELECT @nome_produto AS 'Produto com ID = 3';
+SELECT @total_produtos AS 'Total de Produtos Cadastrados';
+
+-- d)
+DELIMITER $$ -- Altera delimitador de comando para não conflitar com a SP
+DROP PROCEDURE IF EXISTS proc_demo1; -- Exclui procedure, se já existir
+CREATE PROCEDURE proc_demo1() -- Cria procedure proc_demo1(), sem parâmetros
+
+BEGIN
+	DECLARE i INT DEFAULT 0; -- Declara e inicializa variáveis locais
+	DECLARE output VARCHAR(100) DEFAULT 'Saída = ';
+	WHILE i < 10 DO
+		SET output = CONCAT(output, i , ', ');
+		SET i = i + 1;
+	END WHILE;
+	SELECT output;
+END
+$$ DELIMITER ; -- Retorna ao delimitador padrão da linguagem
+
+CALL proc_demo1(); -- Chama a STORED PROCEDURE proc_demo1()
+
+
+CALL proc_demo1(); -- Chama a STORED PROCEDURE proc_demo1()
