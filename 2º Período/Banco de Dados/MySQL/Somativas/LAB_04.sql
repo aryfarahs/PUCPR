@@ -98,7 +98,7 @@ INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('José', '1956-09-08', 1)
 INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Maria', '1975-04-18', 2);
 INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Antônia', '1954-12-10', 3);
 INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Armínio', '1976-07-28', 5);
-INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Luiza', '1945-11-09', 6);
+INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Luiza', '1945-11-09', 5);
 
 -- f)
 SELECT * FROM Editora;
@@ -109,7 +109,7 @@ SET ID_edit = 50
 WHERE ID_edit = 5;
 
 SELECT * FROM Editora;
-SELECT * FROM Autor;
+SELECT * FROM Autora;
 
 
 -- g)
@@ -141,7 +141,6 @@ ON UPDATE SET NULL
 ON DELETE SET NULL;
 
 ALTER TABLE Autor AUTO_INCREMENT = 100; -- Seed = 100 (início do AUTO_INCREMENT)
-
 INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('José', '1956-09-08', 1);
 INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Maria', '1975-04-18', 2);
 INSERT Autor (Nome_Autor, Dt_Nasc, fk_ID_Edit) VALUES ('Antônia', '1954-12-10', 3);
@@ -283,10 +282,155 @@ BEGIN
 		SET i = i + 1;
 	END WHILE;
 	SELECT output;
-END
-$$ DELIMITER ; -- Retorna ao delimitador padrão da linguagem
+END $$ 
+
+DELIMITER ; -- Retorna ao delimitador padrão da linguagem
 
 CALL proc_demo1(); -- Chama a STORED PROCEDURE proc_demo1()
 
 
-CALL proc_demo1(); -- Chama a STORED PROCEDURE proc_demo1()
+
+-- 4.5
+-- a)
+SELECT IF (WEEKDAY(NOW()) IN (5, 6), 'É FIM de semana', 'É DIA de semana') AS 'DIA DE HOJE';
+SELECT IF (WEEKDAY('2023-09-24') IN (5, 6), 'É FIM de semana', 'É DIA de semana') AS '24/09/2023';
+
+-- b)
+SELECT ID AS 'Código', Nome, Qtde AS 'Quantidade',
+IF (Qtde < 100, 'Baixo (menor que 100)', 'Em boa quantidade') AS 'Nível Estoque'
+FROM Estoque;
+
+-- c)
+-- CASE: retorna valor que pode ser atribuído
+-- SINTAXE:
+-- CASE
+-- WHEN condition1 THEN result1
+-- WHEN condition2 THEN result2
+-- WHEN conditionN THEN resultN
+-- ELSE result
+-- END;
+
+INSERT INTO Estoque (Nome, ValUnit) VALUES ('cola bastão', 15.00); -- 1º. INSERT
+INSERT INTO Estoque (Nome, Qtde, ValUnit) VALUES ('tesoura', NULL, 15.00); -- 2º. INSERT
+
+SELECT ID AS 'Código', Nome, Qtde AS 'Quantidade',
+CASE
+WHEN Qtde < 100 THEN 'BAIXO'
+WHEN Qtde BETWEEN 100 AND 300 THEN 'OK'
+WHEN Qtde > 300 THEN 'ALTO'
+
+ELSE 'DESCONHECIDO'
+END AS 'Nível Estoque'
+FROM Estoque
+ORDER BY Nome;
+
+
+-- 4.6
+-- a)
+SELECT nome, Atuacao, Cidade, Estado
+FROM Empresa
+WHERE
+((Cidade <> 'São Paulo' AND Estado <> 'SP')
+OR
+(Cidade <> 'Morretes' AND Estado <> 'PR')
+);
+
+-- b)
+SELECT nome, Atuacao, Cidade, Estado
+FROM Empresa
+WHERE NOT (
+((Cidade = 'São Paulo' AND Estado = 'SP')
+OR
+(Cidade = 'Morretes' AND Estado = 'PR'))
+);
+
+
+-- 4.7
+-- a)
+SET @angle = PI()/4; -- 45º em rad
+SELECT CONCAT( 'O SENO do ângulo: ' ,
+CONVERT(ROUND(@angle,3), CHAR) , ' rad = ' ,
+CONVERT(ROUND(SIN(@angle),3), CHAR)) AS 'SENO 45º (ou PI/4 rad)';
+
+-- b)
+DROP PROCEDURE IF EXISTS proc_demo2;
+
+DELIMITER \\
+CREATE PROCEDURE proc_demo2(IN angle FLOAT, OUT output VARCHAR (100))
+BEGIN
+	SET output = '';
+	SET output = CONCAT (output,
+	' [ ANGULO_GRAUS = ', CONVERT(ROUND(@angle * 180 / PI (), 3), CHAR), ']',
+	' [ ANGULO_RAD = ', CONVERT(ROUND(@angle, 3 ), CHAR), ']',
+	' [ SENO = ', CONVERT(ROUND(SIN(@angle),3 ), CHAR), ']',
+	' [ COSSENO = ', CONVERT(ROUND(COS(@angle),3 ), CHAR), ']',
+	' [ TANGENTE = ', CONVERT(ROUND(TAN(@angle),3 ), CHAR), ']');
+END \\
+DELIMITER ;
+
+-- c)
+SET @angle = PI()/3;
+SET @resp = '';
+CALL proc_demo2(@angle, @resp);
+SELECT @resp AS 'RESPOSTA';
+
+SET @angle = PI()/4;
+SET @resp = '';
+CALL proc_demo2(@angle, @resp);
+SELECT @resp AS 'RESPOSTA';
+
+SET @angle = PI()/6;
+SET @resp = '';
+CALL proc_demo2(@angle, @resp);
+SELECT @resp AS 'RESPOSTA';
+
+-- 4.8
+-- a)
+DROP PROCEDURE IF EXISTS fatorial;
+
+DELIMITER //
+CREATE PROCEDURE fatorial(IN param INT, OUT total INT)
+BEGIN
+	DECLARE param_menos INT DEFAULT NULL ;
+	DECLARE tmp_total INT DEFAULT -1;
+	SET @@max_sp_recursion_depth = 50;
+		IF (param IS NULL) OR (param < 0) OR (param > 12)
+		THEN SET total = -1;
+
+		ELSEIF (param = 0) OR (param = 1)
+		THEN SET total = 1;
+		
+		ELSE
+		SET param_menos = param - 1;
+		CALL fatorial(param_menos, tmp_total);
+
+			IF (tmp_total = -1)
+			THEN SET total = -1;
+			
+			ELSE SET total = tmp_total * param;
+			END IF;
+		END IF;
+END //
+DELIMITER ;
+
+-- b)
+-- conjunto commandos 1:
+SET @resp = -1;
+CALL fatorial (0, @resp);
+SELECT @resp;
+
+-- conjunto commandos 2:
+CALL fatorial (13, @resp);
+SELECT @resp;
+
+-- conjunto commandos 3:
+CALL fatorial (4, @resp);
+SELECT @resp;
+
+-- conjunto commandos 4:
+CALL fatorial (-4, @resp);
+SELECT @resp;
+
+-- conjunto commandos 5:
+CALL fatorial (6, @resp);
+SELECT @resp;
