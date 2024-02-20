@@ -8,6 +8,9 @@ casas = []
 
 
 def exp(bi, x):
+    numero.clear()
+    casas.clear()
+    
     num = str(x)
     for c in range(len(num)):
         numero.append(int(num[c]))
