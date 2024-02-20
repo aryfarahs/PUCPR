@@ -1,19 +1,12 @@
 '''Calculadora para a Troca de Bases'''
 
+from os import system
+from funcoes import *
 
-def exp(bi, x):
-    num = str(x)
-    for c in range(len(num)):
-        numero.append(int(num[c]))
-        casas.append(c)
-    print(numero)
-    print(casas)
+system('cls')
 
 
-
-numero = []
-casas = []
-
+print('')
 print('[1] Binário \n'
       '[2] Octal \n'
       '[3] Decimal \n'
@@ -27,15 +20,18 @@ while True:
         break 
 
     if binicial < 1 or binicial > 4:
-         print('Escolha uma opção válida!')
+         print('\nEscolha uma opção válida!')
 
     else:
         if 0 < binicial < 4:
             num = int(input('Digite o número: '))
+            print()
 
         elif binicial == 4:
-            num = input('Digite o número: ')
-        
-        exp(binicial, num)
+            num = input('Digite o número: ',)
+            print()
+
+        print(f'\n{num} na base decimal é {exp(binicial, num)}\n')
+        print('-'*30)
 
     
