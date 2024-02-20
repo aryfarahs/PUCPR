@@ -5,13 +5,16 @@ from funcoes import *
 
 system('cls')
 
+title('CALULADORA DE BASES')
+print()
 
-print('')
-print('[1] Binário \n'
-      '[2] Octal \n'
-      '[3] Decimal \n'
-      '[4] Hexadecimal \n'
+print('[2] Binário \n'
+      '[8] Octal \n'
+      '[10] Decimal \n'
+      '[16] Hexadecimal \n'
       '[0] SAIR \n')
+
+print('-'*30)
 
 while True:
     binicial = int(input('Qual a base inicial do número? '))
@@ -19,15 +22,15 @@ while True:
     if binicial == 0:
         break 
 
-    if binicial < 1 or binicial > 4:
+    if binicial not in [2,8,10,16]:
          print('\nEscolha uma opção válida!')
 
     else:
-        if 0 < binicial < 4:
+        if binicial != 16:
             num = int(input('Digite o número: '))
             print()
 
-        elif binicial == 4:
+        elif binicial == 16:
             num = input('Digite o número: ',)
             print()
 

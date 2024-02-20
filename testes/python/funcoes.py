@@ -24,10 +24,13 @@ def exp(bi, x):
 
     resp = 0
     for n in numero:
-        for p in casas:
-            resp += numero[n] * (bi ** casas[p])
+        resp += numero[n] * (bi ** casas[-1])
 
     return resp
 
 if __name__ in '__main__':
+
     title('teste')
+
+    n = 100110
+    b = 2
