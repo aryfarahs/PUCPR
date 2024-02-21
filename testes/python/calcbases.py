@@ -22,7 +22,11 @@ while True:
     if binicial == 0:
         break 
 
-    if binicial not in [2,8,10,16]:
+    if binicial == 10:
+        print(f'\npenis\n')
+        print('-'*30)
+
+    elif binicial not in [2,8,16]:
          print('\nEscolha uma opção válida!')
 
     else:
