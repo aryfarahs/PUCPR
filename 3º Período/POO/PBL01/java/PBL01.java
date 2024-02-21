@@ -31,6 +31,8 @@ public class PBL01 {
         int quant = sc.nextInt();
         System.out.println();
 
+        sc.close();
+
         Random random = new Random();
         for (int i=0; i < quant; i++) {
             int num = random.nextInt(1000);
