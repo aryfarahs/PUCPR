@@ -5,9 +5,12 @@ def title(x):
     print(f'{x:^30}')
     print('-' * 30)
 
+l = []
+mult = []
+par = []
+impar = []
 
 def lista(tam):
-    l = []
     for c in range(tam):
         r = randint(0, 1000)
         l.append(r)
@@ -15,21 +18,18 @@ def lista(tam):
 
 
 def multiplos(x):
-    mult = []
     if x % 3 == 0:
         mult.append(x)
     return mult
 
 
 def pares(x):    
-    par = []
     if x % 2 == 0:
         par.append(x)
     return par
 
 
 def impares(x):
-    impar = []
     if x % 2 == 1 :
         impar.append(x)
     return impar
