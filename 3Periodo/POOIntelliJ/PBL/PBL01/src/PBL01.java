@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class PBL01 {
     public static void main(String[] args) {
-        
+
         ArrayList<Integer> numeros = new ArrayList<>();
         ArrayList<Integer> mult = new ArrayList<>();
         ArrayList<Integer> par = new ArrayList<>();
@@ -22,10 +22,10 @@ public class PBL01 {
             System.out.print("-");
         }
         System.out.println();
-        
+
 
         Scanner sc = new Scanner(System.in);
-        
+
         System.out.println();
         System.out.print("Escolha a quantidade de números da lista: ");
         int quant = sc.nextInt();
@@ -53,7 +53,7 @@ public class PBL01 {
                 impar.add(valor);
             }
         }
-        
+
         System.out.println("Múltiplos de 3: " + mult);
         System.out.println("Pares: " + par);
         System.out.println("Ímpares: " + impar);
