@@ -4,7 +4,7 @@ public class Motoboy {
     private String number;
 
     public Motoboy() {
-        this("José Pereira", "222.333.444-55", "43912345678");
+        this("Motoboy Y", "", "");
     }
     public Motoboy(String name, String cpf, String number) {
         this.name = name;

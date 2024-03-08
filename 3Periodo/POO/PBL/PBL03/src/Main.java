@@ -9,7 +9,7 @@ public class Main {
 
         Establishment establishment = new Establishment();
         Establishment establishment1 = new Establishment("Angeloni", "Supermercado",
-                                                         "--", "Água Verde", false);
+                                                         "--", "Água Verde", true);
 
         Client client = new Client();
         Client client1 = new Client(1, "999.888.777-66", "Luiza Maria", "40987654321");

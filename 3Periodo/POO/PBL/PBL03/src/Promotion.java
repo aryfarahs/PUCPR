@@ -4,7 +4,7 @@ public class Promotion {
     private float value;
 
     public Promotion() {
-        this("Farmácia Preço Bom", "Verutex", 0.15F);
+        this("Estabelecimento Z", "", 0F);
     }
     public Promotion(String establishmentName, String product, float value) {
             this.establishmentName = establishmentName;

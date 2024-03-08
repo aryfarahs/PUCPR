@@ -6,7 +6,7 @@ public class Establishment {
     private boolean promotion;
 
     public Establishment() {
-        this("Mc Donalds", "Restaurante", "Fast Food", "Batel", true);
+        this("Estabelecimento Z", "", "", "", false);
     }
     public Establishment(String name, String kind, String productCategory, String location, boolean promotion) {
             this.name = name;

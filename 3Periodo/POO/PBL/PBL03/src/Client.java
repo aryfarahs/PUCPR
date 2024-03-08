@@ -5,7 +5,7 @@ public class Client {
     private String number;
 
     public Client() {
-        this(3, "111.222.333-00", "Orivaldo Penecenter", "41999999999");
+        this(0, "", "Cliente X", "");
     }
     public Client(int favoriteRestaurants, String cpf, String name, String number) {
             this.favoriteRestaurants = favoriteRestaurants;

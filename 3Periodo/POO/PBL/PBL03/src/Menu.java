@@ -4,7 +4,7 @@ public class Menu {
     private float price;
 
     public Menu() {
-        this("Batel Grill", "Gnocchi Frito", 47.90F);
+        this("Estabelecimento Z", "", 0F);
     }
     public Menu(String establishmentName, String product, float price) {
         this.establishmentName = establishmentName;
