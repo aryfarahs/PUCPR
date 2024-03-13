@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <title>Batalha Naval</title>
+</head>
+<body>
+    <h1>Batalha Naval!</h1>
+    <button class="botao" onclick="fodaseOnClick()" id="botadas">Iniciar Jogo</button>
+    <div class="choice">
+        <select id="selectAmmo">
+            <option selected value="0">Tiro</option>
+            <option value="1">Bombinha (0)</option>
+            <option value="2">Bomba Atômica (0)</option>
+        </select>
+        
+        <input type="radio" name="vida" value="3" class="life">3
+        <input type="radio" name="vida" value="5" class="life" checked>5
+        <input type="radio" name="vida" value="7" class="life">7
+    </div>
+    <table cellspacing="0" cellpading="0" id="tabeladas">
+        <script>tabela()</script>
+        <tr>
+            <td colspan="12" class="base"><div id="divScoreboard">Pontos: 0 - Vidas: 5</div></td>
+        </tr>
+    </table>
+    <script>resetGame()</script>
+    <footer>
+        Ary Farah - Adriano Vale - Bruno Martins - oi
+    </footer>
+</body>
+</html>
