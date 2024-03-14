@@ -3,6 +3,7 @@ import os
 
 login = []
 usuarios = []
+logado = 0
 
 while True:
     os.system('cls')
@@ -38,17 +39,24 @@ while True:
                 if nome not in l[0]:
                     print('Oops! Não identificamos nenhuma conta. Tente novamente.')
                     input('<enter para continuar>')
+                    os.system('cls')
 
                 else:
                     senha = str(input('Senha: '))
                     if senha not in l[1]:
                         print('Senha incorreta! Tente novamente')
                         input('<enter para continuar>')
+                        os.system('cls')
                     
                     else:
                         print('Você foi logado com sucesso! Obrigado pela preferência, até logo!')
                         input('<enter para continuar>')
+                        logado = 1
+                        os.system('cls')
                         break
+
+            if logado == 1:
+                break
         
            
 
