@@ -2,7 +2,7 @@ public class Client extends Person {
     private int favoriteRestaurants;
 
     public Client() {
-        super(0, "", "Cliente X", "");
+        super("", "", "");
     }
     public Client(int favoriteRestaurants, String cpf, String name, String number) {
         super(cpf, name, number);
