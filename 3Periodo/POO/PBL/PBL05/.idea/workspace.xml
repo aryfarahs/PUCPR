@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f418b80-2892-46f9-872d-9dfca716becc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../PBL05AAAAAAAAAAAAAA/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PBL05AAAAAAAAAAAAAA/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PBL05AAAAAAAAAAAAAA/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PBL05AAAAAAAAAAAAAA/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PBL05AAAAAAAAAAAAAA/src/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PBL05AAAAAAAAAAAAAA/src/Establishment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PBL05AAAAAAAAAAAAAA/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PBL05AAAAAAAAAAAAAA/src/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PBL05AAAAAAAAAAAAAA/src/Motoboy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PBL05AAAAAAAAAAAAAA/src/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PBL05AAAAAAAAAAAAAA/src/Promotion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PBL05.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Establishment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Motoboy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Promotion.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PBL06/src/Roupa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,19 +41,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/POO/PBL/PBL05AAAAAAAAAAAAAA",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-20.0.2-azul-20.0.2-4caba194b151-eb49e076" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
