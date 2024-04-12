@@ -3,14 +3,8 @@ public class Superior extends Roupa {
     private String estiloSuperior;
     private String comprimentoManga;
 
-    public Superior() {
-        super("", "", "", false, false);
-        this.tipoSuperior = "";
-        this.estiloSuperior = "";
-        this.comprimentoManga = "";
-    }
-
-    public Superior(String tipoSuperior, String estiloSuperior, String comprimentoManga) {
+    public Superior(String tamanho, String cor, String tipoTecido, boolean genero, boolean superior,
+                    String tipoSuperior, String estiloSuperior, String comprimentoManga) {
         super(tamanho, cor, tipoTecido, genero, superior);
         this.tipoSuperior = tipoSuperior;
         this.estiloSuperior = estiloSuperior;
@@ -24,4 +18,8 @@ public class Superior extends Roupa {
     public void setTipoSuperior(String tipoSuperior) {this.tipoSuperior = tipoSuperior;}
     public void setEstiloSuperior(String estiloSuperior) {this.estiloSuperior = estiloSuperior;}
     public void setComprimentoManga(String comprimentoManga) {this.comprimentoManga = comprimentoManga;}
+
+    public Superior() {
+        super(true);
+    }
 }

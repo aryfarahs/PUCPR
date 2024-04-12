@@ -1,9 +1,9 @@
 public class Roupa {
-    private String tamanho;
-    private String cor;
-    private String tipoTecido;
-    private boolean genero;
-    private boolean superior;
+    protected String tamanho;
+    protected String cor;
+    protected String tipoTecido;
+    protected boolean genero;
+    protected boolean superior;
 
     public Roupa(String tamanho, String cor, String tipoTecido, boolean genero, boolean superior) {
         this.tamanho = tamanho;
@@ -24,4 +24,12 @@ public class Roupa {
     public void setTipoTecido(String tipoTecido) {this.tipoTecido = tipoTecido;}
     public void setGenero(boolean genero) {this.genero = genero;}
     public void setSuperior(boolean superior) {this.superior = superior;}
+
+    public Roupa(boolean superior) {
+        this.superior = superior;
+    }
+
+    public void comprar() {
+        System.out.println("A peça veste a parte superior? " + superior);
+    }
 }
