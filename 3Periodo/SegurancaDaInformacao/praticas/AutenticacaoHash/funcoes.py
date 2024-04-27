@@ -38,3 +38,16 @@ def criptografar(senha):
     hash_MD5 = hashlib.md5()
     hash_MD5.update(senha.encode('utf-8'))
     return hash_MD5.hexdigest()
+
+
+def autenticacao(email, senha):
+    hash_MD5 = criptografar(senha)
+
+    with open('usuarios', 'r') as arquivo:
+        usuario = arquivo.read()
+        for l in usuario:
+            if email in l and l['senha'] == hash_MD5:
+                print("logado")
+        else:
+            print("nao deu certo")
+
