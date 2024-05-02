@@ -48,6 +48,6 @@ def autenticacao(email, senha):
         for l in usuario:
             if email in l and l['senha'] == hash_MD5:
                 print("logado")
-        else:
-            print("nao deu certo")
+            else:
+                print("nao deu certo")
 

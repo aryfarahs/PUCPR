@@ -1,10 +1,9 @@
 from funcoes import *
-
-title("Cadastrando Usuários")
-
+import os
 l = []
 
 while True:
+    title("Cadastrando Usuários")
     print("[1] Cadastro\n"
           "[2] Login\n"
           "[0] Sair")
