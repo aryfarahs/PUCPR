@@ -1,0 +1,9 @@
+...
+else:
+    print("E-mail ou Senha incorretos")
+    erros += 1
+    if erros >= 3:
+        print("Muitas tentativas incorretas! Aguarde 10 segundos")
+        time.sleep(10)
+        erros = 0
+...

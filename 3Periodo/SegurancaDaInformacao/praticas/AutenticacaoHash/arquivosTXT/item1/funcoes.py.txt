@@ -1,6 +1,4 @@
 import hashlib
-import time
-
 
 def title(x):
     print('-' * 30)
@@ -32,7 +30,7 @@ def novoUsuario():
     return usuario
 
 def cadastro(usuario):
-    with open('usuarios.txt', 'a') as arquivo:
+    with open('usuarios', 'a') as arquivo:
         arquivo.write(f"{usuario['nome']}, {usuario['email']}, {usuario['senha']}\n")
     print("Usuário cadastrado com sucesso!")
     input('<enter para continuar>')
@@ -43,11 +41,10 @@ def criptografar(senha):
     return hash_MD5.hexdigest()
 
 def login(email, senha):
-    with open('usuarios.txt', 'r') as arquivo:
+    with open('usuarios', 'r') as arquivo:
         for linha in arquivo:
             dados = linha.strip().split(', ')
             if dados[1] == email and dados[2] == criptografar(senha):
                 return True
             else:
-                return False
-
+                print("Email ou senha incorretos.")

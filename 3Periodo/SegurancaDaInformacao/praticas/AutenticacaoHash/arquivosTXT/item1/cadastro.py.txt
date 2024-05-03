@@ -18,18 +18,10 @@ while True:
         cadastro(usuario)
 
     elif choice == 2:
-        erros = 0
         while True:
             email = strMax("E-mail: ", 80)
             senha = strMax("Senha: ", 4)
             if login(email, senha):
                 print("Login bem-sucedido!")
                 break
-            else:
-                print("E-mail ou Senha incorretos")
-                erros += 1
-                if erros >= 3:
-                    print("Muitas tentativas incorretas! Aguarde 10 segundos")
-                    time.sleep(10)
-                    erros = 0
         input('<enter para continuar>')
