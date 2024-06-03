@@ -42,3 +42,14 @@ mapeamento_direto(cache, tamanho_cache, pos_memoria)
 title("IR PARA PRÓXIMO EXEMPLO")
 input("<PRESS ENTER>")
 
+
+
+os.system('cls')
+
+cache = inicializar_cache(4)
+title("Cache Inicial")
+imprimir_cache(cache)
+mapeamento_direto(cache, 4, [17, 13, 17, 25, 33, 9])
+
+title("IR PARA PRÓXIMO EXEMPLO")
+input("<PRESS ENTER>")

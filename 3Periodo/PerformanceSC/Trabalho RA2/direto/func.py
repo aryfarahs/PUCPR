@@ -46,7 +46,7 @@ def mapeamento_direto(cache, tamanho_cache, pos_memoria):
     for c in range(len(pos_memoria)):
         pos_cache = pos_memoria[c] % tamanho_cache
 
-        print(f"\033[1mLinha {c} -> Posição desejada: \033[1;35m{pos_memoria[c]}\033[m")
+        print(f"\033[1mLinha {c} -> Posição da memória desejada: \033[1;35m{pos_memoria[c]}\033[m")
 
         if cache[pos_cache] == pos_memoria[c]:
             hit += 1
