@@ -7,9 +7,9 @@ import os
 # reset = '\033[0m'
 
 def title(x):
-    print('\033[1m-' * 28)
-    print(f'{x:^28}')
-    print('-' * 28 + "\033[m")
+    print('\033[1m-' * 40)
+    print(f'{x:<40}')
+    print('-' * 40 + "\033[m")
 
 
 def inicializar_cache(tam_cache, num_blocos):
@@ -25,11 +25,13 @@ def imprimir_cache(cache):
     v = list(cache.values())
 
     print(f"\033[1;34mTamanho da Cache: {len(cache)}\033[m")
-    title("| Conjunto  | Bloco |")
+    title("|    Conjunto     |        Bloco       |")
     for c in range(len(cache)):
-        print(f"{k[c]:<15} | {str(v[c]):<15}")
+        print(f"{k[c]:^17} | {str(v[c]):^19}")
         print("-" * 40)
     print()
+
+    print("=-" * 20)
 
 
 def atualizar_lru(lru, bloco):
@@ -38,10 +40,8 @@ def atualizar_lru(lru, bloco):
     lru.append(bloco)
 
 def mapeamento_associativo_conjunto(cache, tam_cache, num_blocos, pos_memoria):
-    lru = {i: [] for i in cache.keys()}
     
-    print("Cache Inicial")
-    imprimir_cache(cache)
+    lru = {i: [] for i in cache.keys()}
 
     hit = 0
     miss = 0
@@ -70,19 +70,25 @@ def mapeamento_associativo_conjunto(cache, tam_cache, num_blocos, pos_memoria):
         
         imprimir_cache(cache)
 
+        print()
+
     acessos = miss + hit
     porcHits = (hit / acessos) * 100
 
-    title("Resumo Mapeamento Direto - Ary")
+    title("Resumo Mapeamento Associativo Por Conjunto - Ary")
     print(f"\033[1;35mTotal de acessos: {acessos}\033[m")
     print(f"\033[1;31mMisses: {miss}\033[m")
     print(f"\033[1;32mHits: {hit}\033[m")
     print(f"\033[1;34mTaxa de acertos (hits): {porcHits:.2f}%\033[m")
-    print('-' * 30)
+    print('-' * 40)
 
 
 if __name__ == '__main__':
-    tam_cache = 5
+    os.system('cls')
+
+    tam_cache = 16
     num_blocos = 4
+    pos_memoria = [0, 1, 2, 2, 5, 6]
 
     cache = inicializar_cache(tam_cache, num_blocos)
+    mapeamento_associativo_conjunto(cache, tam_cache, num_blocos, pos_memoria)
