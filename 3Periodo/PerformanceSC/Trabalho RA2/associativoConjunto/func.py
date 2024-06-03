@@ -48,7 +48,6 @@ def mapeamento_associativo_conjunto(cache, tam_cache, num_blocos, pos_memoria):
 
     for c in range(len(pos_memoria)):
         pos_conjunto = (pos_memoria[c] // num_blocos) % (tam_cache // num_blocos)
-        linha = pos_memoria[c] % num_blocos
 
         print(f"\033[1mLinha {c} -> Posição da memória desejada: \033[1;35m{pos_memoria[c]}\033[m")
 
@@ -75,7 +74,7 @@ def mapeamento_associativo_conjunto(cache, tam_cache, num_blocos, pos_memoria):
     acessos = miss + hit
     porcHits = (hit / acessos) * 100
 
-    title("Resumo Mapeamento Associativo Por Conjunto - Ary")
+    title("Resumo Mapeamento Associativo Por Conjunto - Ary | Vini | Ícaro")
     print(f"\033[1;35mTotal de acessos: {acessos}\033[m")
     print(f"\033[1;31mMisses: {miss}\033[m")
     print(f"\033[1;32mHits: {hit}\033[m")

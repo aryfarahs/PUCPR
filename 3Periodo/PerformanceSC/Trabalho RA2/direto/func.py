@@ -62,7 +62,7 @@ def mapeamento_direto(cache, tamanho_cache, pos_memoria):
     acesso = hit + miss
     porcHits = (hit / acesso) * 100
 
-    title("Resumo Mapeamento Direto - Ary")
+    title("Resumo Mapeamento Direto - Ary | Vini | Ícaro")
     print(f"\033[1;35mTotal de acessos: {acesso}\033[m")
     print(f"\033[1;31mMisses: {miss}\033[m")
     print(f"\033[1;32mHits: {hit}\033[m")
