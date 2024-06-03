@@ -12,13 +12,11 @@ def title(x):
     print('-' * 28 + "\033[m")
 
 
-
 def inicializar_cache(tamanho_cache):
     cache = {}
     for c in range(tamanho_cache):
         cache[c] = -1
     return cache
-
 
 
 def imprimir_cache(cache=dict):
@@ -35,7 +33,6 @@ def imprimir_cache(cache=dict):
     print("")
     print("=-" * 14)
     print("")
-
 
 
 def mapeamento_direto(cache, tamanho_cache, pos_memoria):

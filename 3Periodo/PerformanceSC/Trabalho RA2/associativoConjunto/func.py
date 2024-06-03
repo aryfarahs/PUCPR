@@ -39,6 +39,7 @@ def atualizar_lru(lru, bloco):
         lru.remove(bloco)
     lru.append(bloco)
 
+
 def mapeamento_associativo_conjunto(cache, tam_cache, num_blocos, pos_memoria):
     
     lru = {i: [] for i in cache.keys()}
