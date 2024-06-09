@@ -1,0 +1,788 @@
+<?xml version="1.0" standalone="no"?>
+<mlt LC_NUMERIC="C" version="7.19.0" title="Shotcut version 23.07.29" producer="main_bin">
+  <profile description="PAL 4:3 DV or DVD" width="1920" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="25" frame_rate_den="1" colorspace="709"/>
+  <playlist id="main_bin">
+    <property name="xml_retain">1</property>
+  </playlist>
+  <producer id="black" in="00:00:00.000" out="00:04:10.920">
+    <property name="length">00:04:10.960</property>
+    <property name="eof">pause</property>
+    <property name="resource">0</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="mlt_image_format">rgba</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00.000" out="00:04:10.920"/>
+  </playlist>
+  <producer id="producer0" in="00:00:00.000" out="03:59:59.960">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/C8B904BE704FAC296F8E8724833AC4CB/Imagem do WhatsApp de 2024-06-08 à(s) 21.53.47_ae4af2e3.jpg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="shotcut:caption">Imagem do WhatsApp de 2024-06-08 à(s) 21.53.47_ae4af2e3.jpg</property>
+    <property name="shotcut:hash">b329e0b5e03220cf54bfef436f4ee10a</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter1" out="00:00:01.800">
+      <property name="start">1</property>
+      <property name="level">00:00:01.280=1;00:00:01.800=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">14</property>
+    </filter>
+    <filter id="filter0" out="00:00:01.800">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.040=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">2</property>
+    </filter>
+    <filter id="filter3" out="00:00:01.800">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:01.280=0;00:00:01.800=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">14</property>
+    </filter>
+    <filter id="filter2" out="00:00:01.800">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.040=0</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">2</property>
+    </filter>
+  </producer>
+  <chain id="chain0" out="00:01:30.760">
+    <property name="length">00:01:30.800</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 1.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:12:13</property>
+    <property name="shotcut:caption">pergunta 1.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">0e5488893a378246e0060eb390f83a79</property>
+    <property name="xml">was here</property>
+    <filter id="filter4" in="00:00:17.360" out="00:00:18.880">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.480=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">13</property>
+    </filter>
+    <filter id="filter5" in="00:00:17.360" out="00:00:18.880">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.480=0</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">13</property>
+    </filter>
+  </chain>
+  <chain id="chain1" out="00:01:30.760">
+    <property name="length">00:01:30.800</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 1.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:12:13</property>
+    <property name="shotcut:caption">pergunta 1.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">0e5488893a378246e0060eb390f83a79</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain2" out="00:01:30.760">
+    <property name="length">00:01:30.800</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 1.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:12:13</property>
+    <property name="shotcut:caption">pergunta 1.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">0e5488893a378246e0060eb390f83a79</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain3" out="00:01:30.760">
+    <property name="length">00:01:30.800</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 1.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:12:13</property>
+    <property name="shotcut:caption">pergunta 1.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">0e5488893a378246e0060eb390f83a79</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain4" out="00:01:30.760">
+    <property name="length">00:01:30.800</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 1.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:12:13</property>
+    <property name="shotcut:caption">pergunta 1.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">0e5488893a378246e0060eb390f83a79</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain5" out="00:01:30.760">
+    <property name="length">00:01:30.800</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 1.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:12:13</property>
+    <property name="shotcut:caption">pergunta 1.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">0e5488893a378246e0060eb390f83a79</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain6" out="00:01:30.760">
+    <property name="length">00:01:30.800</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 1.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:12:13</property>
+    <property name="shotcut:caption">pergunta 1.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">0e5488893a378246e0060eb390f83a79</property>
+    <property name="xml">was here</property>
+    <filter id="filter6" in="00:01:17.760" out="00:01:26.280">
+      <property name="start">1</property>
+      <property name="level">00:00:08.040=1;00:00:08.520=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">13</property>
+    </filter>
+    <filter id="filter7" in="00:01:17.760" out="00:01:26.280">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:08.040=0;00:00:08.520=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">13</property>
+    </filter>
+  </chain>
+  <chain id="chain7" out="00:00:45.000">
+    <property name="length">00:00:45.040</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 2.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T00:48:44</property>
+    <property name="shotcut:caption">pergunta 2.mp4</property>
+    <property name="shotcut:hash">93cf23673028ca99c4efd2ddc814d7e0</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter8" in="00:00:00.360" out="00:00:18.040">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.800=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">21</property>
+    </filter>
+    <filter id="filter10" in="00:00:00.360" out="00:00:18.040">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.800=0</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">21</property>
+    </filter>
+  </chain>
+  <chain id="chain8" out="00:00:45.000">
+    <property name="length">00:00:45.040</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 2.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T00:48:44</property>
+    <property name="shotcut:caption">pergunta 2.mp4</property>
+    <property name="shotcut:hash">93cf23673028ca99c4efd2ddc814d7e0</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter9" in="00:00:28.320" out="00:00:44.760">
+      <property name="start">1</property>
+      <property name="level">00:00:15.680=1;00:00:16.440=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">20</property>
+    </filter>
+    <filter id="filter11" in="00:00:28.320" out="00:00:44.760">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:15.680=0;00:00:16.440=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">20</property>
+    </filter>
+  </chain>
+  <chain id="chain9" out="00:00:50.320">
+    <property name="length">00:00:50.360</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 3.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T00:54:16</property>
+    <property name="shotcut:caption">pergunta 3.mp4</property>
+    <property name="shotcut:hash">bb4a9c7d2fe5cac17f8a4a7b8926f25e</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter12" in="00:00:00.400" out="00:00:08.440">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.480=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">13</property>
+    </filter>
+    <filter id="filter13" in="00:00:00.400" out="00:00:08.440">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.480=0</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">13</property>
+    </filter>
+  </chain>
+  <chain id="chain10" out="00:00:50.320">
+    <property name="length">00:00:50.360</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 3.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T00:54:16</property>
+    <property name="shotcut:caption">pergunta 3.mp4</property>
+    <property name="shotcut:hash">bb4a9c7d2fe5cac17f8a4a7b8926f25e</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain11" out="00:00:50.320">
+    <property name="length">00:00:50.360</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 3.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T00:54:16</property>
+    <property name="shotcut:caption">pergunta 3.mp4</property>
+    <property name="shotcut:hash">bb4a9c7d2fe5cac17f8a4a7b8926f25e</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain12" out="00:00:50.320">
+    <property name="length">00:00:50.360</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 3.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T00:54:16</property>
+    <property name="shotcut:caption">pergunta 3.mp4</property>
+    <property name="shotcut:hash">bb4a9c7d2fe5cac17f8a4a7b8926f25e</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain13" out="00:00:50.320">
+    <property name="length">00:00:50.360</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 3.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T00:54:16</property>
+    <property name="shotcut:caption">pergunta 3.mp4</property>
+    <property name="shotcut:hash">bb4a9c7d2fe5cac17f8a4a7b8926f25e</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter14" in="00:00:47.080" out="00:00:50.320">
+      <property name="start">1</property>
+      <property name="level">00:00:02.720=1;00:00:03.240=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">14</property>
+    </filter>
+    <filter id="filter15" in="00:00:47.080" out="00:00:50.320">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:02.720=0;00:00:03.240=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">14</property>
+    </filter>
+  </chain>
+  <chain id="chain14" out="00:00:28.000">
+    <property name="length">00:00:28.040</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 4.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T02:01:05</property>
+    <property name="shotcut:caption">pergunta 4.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">f5f9ec1441dfde623180e36fc108f212</property>
+    <property name="xml">was here</property>
+    <filter id="filter16" in="00:00:00.280" out="00:00:05.080">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.520=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">14</property>
+    </filter>
+    <filter id="filter17" in="00:00:00.280" out="00:00:05.080">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.520=0</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">14</property>
+    </filter>
+  </chain>
+  <chain id="chain15" out="00:00:28.000">
+    <property name="length">00:00:28.040</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 4.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T02:01:05</property>
+    <property name="shotcut:caption">pergunta 4.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">f5f9ec1441dfde623180e36fc108f212</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain16" out="00:00:28.000">
+    <property name="length">00:00:28.040</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 4.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T02:01:05</property>
+    <property name="shotcut:caption">pergunta 4.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">f5f9ec1441dfde623180e36fc108f212</property>
+    <property name="xml">was here</property>
+    <filter id="filter18" in="00:00:10.360" out="00:00:27.280">
+      <property name="start">1</property>
+      <property name="level">00:00:16.720=1;00:00:16.920=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">6</property>
+    </filter>
+    <filter id="filter19" in="00:00:10.360" out="00:00:27.280">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:16.720=0;00:00:16.920=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">6</property>
+    </filter>
+  </chain>
+  <chain id="chain17" out="00:01:20.400">
+    <property name="length">00:01:20.440</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 5.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:21:27</property>
+    <property name="shotcut:caption">pergunta 5.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">bf2ccc8cf532ae145b151ac330aec7b0</property>
+    <property name="xml">was here</property>
+    <filter id="filter20" in="00:00:02.200" out="00:00:05.120">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.280=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">8</property>
+    </filter>
+    <filter id="filter21" in="00:00:02.200" out="00:00:05.120">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.280=0</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">8</property>
+    </filter>
+  </chain>
+  <chain id="chain18" out="00:01:20.400">
+    <property name="length">00:01:20.440</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 5.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:21:27</property>
+    <property name="shotcut:caption">pergunta 5.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">bf2ccc8cf532ae145b151ac330aec7b0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain19" out="00:01:20.400">
+    <property name="length">00:01:20.440</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 5.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:21:27</property>
+    <property name="shotcut:caption">pergunta 5.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">bf2ccc8cf532ae145b151ac330aec7b0</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain20" out="00:01:20.400">
+    <property name="length">00:01:20.440</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 5.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:21:27</property>
+    <property name="shotcut:caption">pergunta 5.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">bf2ccc8cf532ae145b151ac330aec7b0</property>
+    <property name="xml">was here</property>
+    <filter id="filter22" in="00:01:11.720" out="00:01:17.200">
+      <property name="start">1</property>
+      <property name="level">00:00:05.000=1;00:00:05.480=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">13</property>
+    </filter>
+    <filter id="filter23" in="00:01:11.720" out="00:01:17.200">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:05.000=0;00:00:05.480=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">13</property>
+    </filter>
+  </chain>
+  <chain id="chain21" out="00:00:40.840">
+    <property name="length">00:00:40.880</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 6.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:20:15</property>
+    <property name="shotcut:caption">pergunta 6.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">90a51b5d7229b05fed992ff28727c98c</property>
+    <property name="xml">was here</property>
+    <filter id="filter24" in="00:00:02.760" out="00:00:10.040">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.240=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">7</property>
+    </filter>
+    <filter id="filter25" in="00:00:02.760" out="00:00:10.040">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.240=0</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">7</property>
+    </filter>
+  </chain>
+  <chain id="chain22" out="00:00:40.840">
+    <property name="length">00:00:40.880</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 6.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:20:15</property>
+    <property name="shotcut:caption">pergunta 6.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">90a51b5d7229b05fed992ff28727c98c</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain23" out="00:00:40.840">
+    <property name="length">00:00:40.880</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 6.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:20:15</property>
+    <property name="shotcut:caption">pergunta 6.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">90a51b5d7229b05fed992ff28727c98c</property>
+    <property name="xml">was here</property>
+    <filter id="filter26" in="00:00:24.760" out="00:00:37.960">
+      <property name="start">1</property>
+      <property name="level">00:00:12.680=1;00:00:13.200=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">14</property>
+    </filter>
+    <filter id="filter27" in="00:00:24.760" out="00:00:37.960">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:12.680=0;00:00:13.200=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">14</property>
+    </filter>
+  </chain>
+  <chain id="chain24" out="00:01:10.560">
+    <property name="length">00:01:10.600</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 7.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:12:24</property>
+    <property name="shotcut:caption">pergunta 7.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">efa26cf77a0b8e08d3cd8d5c72570c71</property>
+    <property name="xml">was here</property>
+    <filter id="filter28" in="00:00:10.000" out="00:00:18.480">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.440=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">12</property>
+    </filter>
+    <filter id="filter29" in="00:00:10.000" out="00:00:18.480">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.440=0</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">12</property>
+    </filter>
+  </chain>
+  <chain id="chain25" out="00:01:10.560">
+    <property name="length">00:01:10.600</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 7.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:12:24</property>
+    <property name="shotcut:caption">pergunta 7.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">efa26cf77a0b8e08d3cd8d5c72570c71</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain26" out="00:01:10.560">
+    <property name="length">00:01:10.600</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/3Periodo/Filosofia/TDE I - Entrevista com Profissa/vfinal/pergunta 7.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="creation_time">2024-06-09T01:12:24</property>
+    <property name="shotcut:caption">pergunta 7.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">efa26cf77a0b8e08d3cd8d5c72570c71</property>
+    <property name="xml">was here</property>
+  </chain>
+  <chain id="chain27" out="00:00:36.760">
+    <property name="length">00:00:36.800</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/21A34823F0C1E2A4BF5DA8A40BFD7B84/Vídeo do WhatsApp de 2024-06-08 à(s) 23.00.47_51b89f7a.mp4</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="shotcut:caption">Vídeo do WhatsApp de 2024-06-08 à(s) 23.00.47_51b89f7a.mp4</property>
+    <property name="shotcut:skipConvert">1</property>
+    <property name="ignore_points">0</property>
+    <property name="shotcut:hash">f269afda40bf0997154667f4f095b212</property>
+    <property name="xml">was here</property>
+    <filter id="filter30" in="00:00:09.080" out="00:00:28.040">
+      <property name="start">1</property>
+      <property name="level">00:00:18.560=1;00:00:18.960=0</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeOutBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animOut">11</property>
+    </filter>
+    <filter id="filter31" in="00:00:09.080" out="00:00:28.040">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:18.560=0;00:00:18.960=-60</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeOutVolume</property>
+      <property name="shotcut:animOut">11</property>
+    </filter>
+  </chain>
+  <producer id="producer1" in="00:00:00.000" out="03:59:59.960">
+    <property name="length">04:00:00.000</property>
+    <property name="eof">pause</property>
+    <property name="resource">C:/Users/aryga/AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/TempState/DE9878E9D33C60263A094ABC94FAB3F0/Imagem do WhatsApp de 2024-06-08 à(s) 23.31.54_a450e797.jpg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="seekable">1</property>
+    <property name="format">1</property>
+    <property name="mlt_service">qimage</property>
+    <property name="shotcut:caption">Imagem do WhatsApp de 2024-06-08 à(s) 23.31.54_a450e797.jpg</property>
+    <property name="shotcut:hash">79602362987d4d19182d1e293c246a0b</property>
+    <property name="ignore_points">0</property>
+    <property name="xml">was here</property>
+    <filter id="filter32" in="00:00:00.120" out="00:00:00.720">
+      <property name="start">1</property>
+      <property name="level">00:00:00.000=0;00:00:00.240=1</property>
+      <property name="mlt_service">brightness</property>
+      <property name="shotcut:filter">fadeInBrightness</property>
+      <property name="alpha">1</property>
+      <property name="shotcut:animIn">7</property>
+    </filter>
+    <filter id="filter33" in="00:00:00.120" out="00:00:00.720">
+      <property name="window">75</property>
+      <property name="max_gain">20dB</property>
+      <property name="level">00:00:00.000=-60;00:00:00.240=0</property>
+      <property name="mlt_service">volume</property>
+      <property name="shotcut:filter">fadeInVolume</property>
+      <property name="shotcut:animIn">7</property>
+    </filter>
+  </producer>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer0" in="00:00:00.000" out="00:00:01.800"/>
+    <entry producer="chain0" in="00:00:17.360" out="00:00:18.880"/>
+    <entry producer="chain1" in="00:00:23.120" out="00:00:43.680"/>
+    <entry producer="chain2" in="00:00:46.120" out="00:00:58.080"/>
+    <entry producer="chain3" in="00:01:05.000" out="00:01:08.480"/>
+    <entry producer="chain4" in="00:01:09.080" out="00:01:12.840"/>
+    <entry producer="chain5" in="00:01:13.480" out="00:01:17.320"/>
+    <entry producer="chain6" in="00:01:17.760" out="00:01:26.280"/>
+    <entry producer="chain7" in="00:00:00.360" out="00:00:18.040"/>
+    <entry producer="chain8" in="00:00:28.320" out="00:00:44.760"/>
+    <entry producer="chain9" in="00:00:00.400" out="00:00:08.440"/>
+    <entry producer="chain10" in="00:00:09.280" out="00:00:22.640"/>
+    <entry producer="chain11" in="00:00:26.160" out="00:00:36.360"/>
+    <entry producer="chain12" in="00:00:38.600" out="00:00:47.040"/>
+    <entry producer="chain13" in="00:00:47.080" out="00:00:50.320"/>
+    <entry producer="chain14" in="00:00:00.280" out="00:00:05.080"/>
+    <entry producer="chain15" in="00:00:05.520" out="00:00:08.080"/>
+    <entry producer="chain16" in="00:00:10.360" out="00:00:27.280"/>
+    <entry producer="chain17" in="00:00:02.200" out="00:00:05.120"/>
+    <entry producer="chain18" in="00:00:06.280" out="00:00:09.120"/>
+    <entry producer="chain19" in="00:00:19.000" out="00:00:36.160"/>
+    <entry producer="chain20" in="00:01:11.720" out="00:01:17.200"/>
+    <entry producer="chain21" in="00:00:02.760" out="00:00:10.040"/>
+    <entry producer="chain22" in="00:00:10.240" out="00:00:16.440"/>
+    <entry producer="chain23" in="00:00:24.760" out="00:00:37.960"/>
+    <entry producer="chain24" in="00:00:10.000" out="00:00:18.480"/>
+    <entry producer="chain25" in="00:00:20.120" out="00:00:24.600"/>
+    <entry producer="chain26" in="00:00:25.120" out="00:00:30.280"/>
+    <entry producer="chain27" in="00:00:09.080" out="00:00:27.920"/>
+    <entry producer="producer1" in="00:00:00.120" out="00:00:00.720"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 23.07.29" in="00:00:00.000" out="00:04:10.920">
+    <property name="shotcut">1</property>
+    <property name="shotcut:projectAudioChannels">2</property>
+    <property name="shotcut:projectFolder">1</property>
+    <property name="shotcut:scaleFactor">0.840584</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0.1</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="threads">0</property>
+      <property name="disable">1</property>
+    </transition>
+  </tractor>
+</mlt>
