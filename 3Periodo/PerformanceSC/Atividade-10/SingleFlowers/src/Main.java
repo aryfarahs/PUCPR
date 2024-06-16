@@ -26,7 +26,7 @@ public class Main{
 
         long duration = endTime - startTime;
 
-        
+
         File outputFile = new File(ARQUIVO_DESTINO);
         ImageIO.write(ImagemResultado, "jpg", outputFile);
 
