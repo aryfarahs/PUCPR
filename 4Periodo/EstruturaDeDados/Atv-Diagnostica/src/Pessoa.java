@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Pessoa {
     private String name;
     private String email;
@@ -26,6 +29,5 @@ public abstract class Pessoa {
     public String getCpf() {
         return cpf;
     }
-
 
 }
