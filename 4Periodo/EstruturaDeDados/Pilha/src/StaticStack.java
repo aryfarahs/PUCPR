@@ -12,8 +12,8 @@ public class StaticStack<T> {
         if(isFull()) {
             throw new IllegalStateException("Pilha cheia!");
         }
-        this.data[top] = data;
         this.top++;
+        this.data[top] = data;
 
     }
 
