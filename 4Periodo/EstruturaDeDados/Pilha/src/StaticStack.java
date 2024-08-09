@@ -42,9 +42,6 @@ public class StaticStack<T> {
         return this.top == -1;
     }
 
-    public String toString() {
-        
-    }
 
     public int getSize() {
         return size;
