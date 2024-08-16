@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FilaEstatica.iml" filepath="$PROJECT_DIR$/FilaEstatica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FilaCircular.iml" filepath="$PROJECT_DIR$/FilaCircular.iml" />
     </modules>
   </component>
 </project>
