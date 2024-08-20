@@ -1,39 +1,53 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("== FILA ESTÁTICA ==");
+        System.out.println("== LISTA ESTÁTICA ==");
 
         StaticList<Integer> fila1 = new StaticList<>(4);
 
         fila1.show();
 
-        System.out.println("Adicionando valor 5...");
+        System.out.println("Adicionando o valor 5...");
         fila1.add(5);
         fila1.show();
 
-        System.out.println("Adicionando valor 8...");
-        fila1.add(8);
+        System.out.println("Removendo o último valor da fila...");
+        fila1.pop();
         fila1.show();
 
-        System.out.println("Removendo primeiro valor da fila...");
-        fila1.remove();
-        fila1.show();
-
-        System.out.println("Adicionando valor 6...");
+        System.out.println("Adicionando o valor 6...");
         fila1.add(6);
+        fila1.show();
+
+        System.out.println("Inserindo o valor 9...");
+        fila1.insert(9, 2);
+        fila1.show();
+
+        System.out.println("Adicionando o valor 10...");
+        fila1.add(10);
+        fila1.show();
+
+        System.out.println("Adicionando o valor 20...");
+        fila1.add(20);
+        fila1.show();
+
+        System.out.println("Adicionando o valor 30...");
+        fila1.add(30);
+        fila1.show();
+
+        System.out.println("Deletando o valor da posição 2...");
+        fila1.delete(1);
+        fila1.show();
+
+        System.out.println("Retirando os valores 20...");
+        fila1.remove(20);
         fila1.show();
 
         System.out.println("Limpando a fila...");
         fila1.clear();
         fila1.show();
 
-        System.out.println("Adicionando valor 9...");
-        fila1.insert(9, 2);
-        fila1.show();
 
-        System.out.println("Adicionando valor 9...");
-        fila1.add(10);
-        fila1.show();
 
 
 

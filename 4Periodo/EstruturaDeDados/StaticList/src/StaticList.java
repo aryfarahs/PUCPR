@@ -1,10 +1,8 @@
 public class StaticList<T> {
-
     private int top = -1;
-    private int base = 0;
     private T[] data;
     private int size;
-    public int qnt;
+    public int qnt = 0;
 
 
     public StaticList(int size) {
@@ -17,6 +15,10 @@ public class StaticList<T> {
             System.out.println("Fila já está cheia!");
             return;
         }
+        this.top++;
+        while (this.data[top] != null) {
+            this.top++;
+        }
         this.qnt++;
         this.data[top] = data;
     }
@@ -26,27 +28,47 @@ public class StaticList<T> {
             System.out.println("Fila já está cheia!");
             return;
         }
-        this.top++;
+        this.qnt++;
         this.data[index] = data;
     }
 
-    public T remove() {
-        T rmvd = this.data[base];
+    public T pop() {
+        T rmvd = this.data[qnt];
         if (isEmpty()) {
             System.out.println("Fila está vazia!");
             return rmvd;
         }
-        this.data[base] = null;
-        this.base++;
+        this.data[top] = null;
+        this.top--;
+        this.qnt--;
         return rmvd;
     }
 
+    public T delete(int index) {
+        T rmvd = this.data[index];
+        if (rmvd == null) {
+            System.out.println("Essa posição está vazia!");
+        } else {
+            this.data[index] = null;
+        }
+        return rmvd;
+
+    }
+
+    public T remove(T value) {
+        for (int i = 0; i < this.size; i++) {
+            if (this.data[i] == value) {
+                this.data[i] = null;
+            }
+        }
+        return value;
+    }
+
     public void clear() {
-        for (int i = this.base; i <= this.top; i++) {
+        for (int i = this.size-1; i >= 0; i--) {
             this.data[i] = null;
         }
         this.top = -1;
-        this.base = 0;
     }
 
     public void show() {
