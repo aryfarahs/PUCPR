@@ -133,7 +133,7 @@ public class Tree<T extends Comparable> {
                         }
                     }
                     else {
-                        this.root = null
+                        this.root = null;
                     }
 
                 }
@@ -147,6 +147,7 @@ public class Tree<T extends Comparable> {
                 current = current.getRight();
             }
         }
+        return false;
     }
 
     // IMPRIMIR EM-ORDEM
@@ -158,8 +159,8 @@ public class Tree<T extends Comparable> {
         }
     }
 
-   // IMPRIMIR PRÉ-ORDER
-   public void showPreOrdered(Node<T> current) {
+    // IMPRIMIR PRÉ-ORDER
+    public void showPreOrdered(Node<T> current) {
        if (current != null) {
            System.out.print(current.getValue() + " - ");
            showPreOrdered(current.getLeft());
@@ -167,8 +168,8 @@ public class Tree<T extends Comparable> {
        }
    }
 
-   // IMPRIMIR PÓS-ORDEM
-   public void showPosOrdered(Node<T> current) {
+    // IMPRIMIR PÓS-ORDEM
+    public void showPosOrdered(Node<T> current) {
        if (current != null) {
            showPosOrdered(current.getLeft());
            showPosOrdered(current.getRight());
