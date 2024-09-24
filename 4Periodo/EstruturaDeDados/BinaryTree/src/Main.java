@@ -2,6 +2,7 @@ public class Main {
     public static void main(String[] args) {
         Tree<Integer> binaryTree = new Tree<Integer>();
 
+        binaryTree.add(12);
         binaryTree.add(5);
         binaryTree.add(7);
         binaryTree.add(10);
@@ -18,6 +19,11 @@ public class Main {
 //        System.out.println();
 //        System.out.println("\nPÓS ORDEM");
 //        binaryTree.showPosOrdered(binaryTree.getRoot());
+
+        binaryTree.rmv(12);
+        System.out.println();
+        System.out.println("\nRemovendo o 12...");
+        binaryTree.showOrdered(binaryTree.getRoot());
 
         binaryTree.rmv(5);
         System.out.println();
