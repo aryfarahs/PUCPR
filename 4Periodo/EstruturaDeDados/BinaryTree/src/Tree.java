@@ -7,6 +7,7 @@ public class Tree<T extends Comparable> {
 
     public Node<T> getRoot() {
         return root;
+
     }
 
 
