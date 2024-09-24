@@ -52,102 +52,65 @@ public class Tree<T extends Comparable> {
         // buscar elemento
         while (current != null) {
             if (current.getValue().equals(value)) {
-
-                // remover o elemento
-                // filho à direita
-                if (current.getRight() != null) {
-                    Node<T> altern = current.getRight();
-                    Node<T> alternDad = current;
-
-                    // buscar o número mais próximo do que deseja
-                    while (altern.getLeft() != null) {
-                        alternDad = altern;
-                        altern = altern.getLeft();
-                    }
-                    // substituir o atual (com pai)
-                    if (currentDad != null) {
-                        if (current.getValue().compareTo(currentDad.getValue()) == -1) {
-                            currentDad.setLeft(altern);
-
-                        } else {
-                            currentDad.setRight(altern);
-                        }
-                    }
-                    // substituir o atual (sem pai) == é a raiz!
-                    else {
-                        this.root = altern;
-                    }
-
-                    // removendo elemento
-                    if (altern.getValue().compareTo(alternDad.getValue()) == -1) {
-                        alternDad.setLeft(null);
-
-                    } else {
-                        alternDad.setRight(null);
-                    }
-
-                }
-
-                // filho somente à esquerda
-                else if (current.getLeft() != null) {
-                    Node<T> altern = current.getLeft();
-                    Node<T> alternDad = current;
-
-                    // buscar o número mais próximo do que deseja
-                    while (altern.getRight() != null) {
-                        alternDad = altern;
-                        altern = altern.getRight();
-                    }
-                    // substituir o atual (com pai)
-                    if (currentDad != null) {
-                        if (current.getValue().compareTo(currentDad.getValue()) == -1) {
-                            currentDad.setLeft(altern);
-
-                        } else {
-                            currentDad.setRight(altern);
-                        }
-                    }
-                    // substituir o atual (sem pai) == é a raiz!
-                    else {
-                        this.root = altern;
-                    }
-
-                    // removendo elemento
-                    if (altern.getValue().compareTo(alternDad.getValue()) == -1) {
-                        alternDad.setLeft(null);
-
-                    } else {
-                        alternDad.setRight(null);
-                    }
-
-                }
-
-                // sem filho
-                else {
-                    if (currentDad != null) {
-                        if (current.getValue().compareTo(currentDad.getValue()) == -1) {
-                            currentDad.setLeft(null);
-
-                        } else {
-                            currentDad.setRight(null);
-                        }
-                    }
-                    else {
-                        this.root = null;
-                    }
-
-                }
-
-            } else if (value.compareTo(current.getValue()) == -1) { // é menor
+                break;
+            } else if (value.compareTo(current.getValue()) == -1) {
                 currentDad = current;
                 current = current.getLeft();
-
             } else {
                 currentDad = current;
                 current = current.getRight();
             }
         }
-        return false;
+
+        // Verificar se o elemento existe
+        if (current == null) {
+            return false; // Não encontrou o valor
+        }
+
+        // Caso 1: Nó sem filhos
+        if (current.getLeft() == null && current.getRight() == null) {
+            if (currentDad == null) {
+                this.root = null; // Se for a raiz
+            } else if (currentDad.getLeft() == current) {
+                currentDad.setLeft(null);
+            } else {
+                currentDad.setRight(null);
+            }
+        }
+        // Caso 2: Nó com apenas um filho
+        else if (current.getLeft() == null || current.getRight() == null) {
+            Node<T> child = (current.getLeft() != null) ? current.getLeft() : current.getRight();
+            if (currentDad == null) {
+                this.root = child; // Se for a raiz
+            } else if (currentDad.getLeft() == current) {
+                currentDad.setLeft(child);
+            } else {
+                currentDad.setRight(child);
+            }
+        }
+        // Caso 3: Nó com dois filhos
+        else {
+            Node<T> altern = current.getRight();
+            Node<T> alternDad = current;
+
+            // Encontrar o sucessor (menor elemento à direita)
+            while (altern.getLeft() != null) {
+                alternDad = altern;
+                altern = altern.getLeft();
+            }
+
+            // Substituir o valor do nó a ser removido pelo sucessor
+            current.setValue(altern.getValue());
+
+            // Remover o sucessor da subárvore
+            if (alternDad.getLeft() == altern) {
+                alternDad.setLeft(altern.getRight());
+            } else {
+                alternDad.setRight(altern.getRight());
+            }
+        }
+
+        return true; // Remoção bem-sucedida
     }
 
     // IMPRIMIR EM-ORDEM
