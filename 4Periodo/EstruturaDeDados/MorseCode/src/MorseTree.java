@@ -1,39 +1,38 @@
-public class MorseTree<T> {
-    private Node<T> root;
+public class MorseTree {
+    private Node root;
 
     public MorseTree() {
-        this.root.setValue((T) " ");
+        this.root = new Node(" "); // Inicializa a raiz corretamente
     }
 
-    public Node<T> getRoot() {
+    public Node getRoot() {
         return root;
     }
 
-    public void insert(T value){
-        Node<T> newElement = new Node<T>(value);
+    public void insert(String sequence, String value) {
+        Node current = this.root;
 
-        Node<T> current = this.root;
-        while(true) {
-            if (newElement.getValue().equals('.')) {
-                if (current.getLeft() != null) {
-                    newElement = current.getLeft();
+        for (char c : sequence.toCharArray()) { // Itera sobre os caracteres da sequência Morse
+            if (c == '.') {
+                // Verifica se o nó da esquerda já existe
+                if (current.getLeft() == null) {
+                    current.setLeft(new Node(null)); // Cria novo nó se não existir
                 }
-                else {
-                    current.setLeft(newElement);
-                    break;
+                current = current.getLeft(); // Move para a esquerda
+            } else if (c == '-') {
+                // Verifica se o nó da direita já existe
+                if (current.getRight() == null) {
+                    current.setRight(new Node(null)); // Cria novo nó se não existir
                 }
-            }
-            else if (newElement.getValue().equals('-')) {
-                if (current.getRight() != null) {
-                    newElement = current.getRight();
-                }
-                else {
-                    current.setRight(newElement);
-                }
+                current = current.getRight(); // Move para a direita
             }
         }
+
+        // Ao final, insere o valor no nó final da sequência Morse
+        current.setValue(value); // Apenas o nó final recebe o valor
     }
 
-
-
+    public String translate([] ) {
+        
+    }
 }

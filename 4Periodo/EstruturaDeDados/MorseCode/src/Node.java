@@ -1,35 +1,35 @@
-public class Node<T> {
-    protected Node<T> left;
-    protected Node<T> right;
-    protected T value;
+public class Node {
+    protected Node left;
+    protected Node right;
+    protected String value;
 
-    public Node(T value) {
+    public Node(String value) {
         this.value = value;
         this.left = null;
         this.right = null;
     }
 
-    public Node<T> getLeft() {
+    public Node getLeft() {
         return left;
     }
 
-    public Node<T> getRight() {
+    public Node getRight() {
         return right;
     }
 
-    public T getValue() {
+    public String getValue() {
         return value;
     }
 
-    public void setLeft(Node<T> left) {
+    public void setLeft(Node left) {
         this.left = left;
     }
 
-    public void setRight(Node<T> right) {
+    public void setRight(Node right) {
         this.right = right;
     }
 
-    public void setValue(T value) {
+    public void setValue(String value) {
         this.value = value;
     }
 
