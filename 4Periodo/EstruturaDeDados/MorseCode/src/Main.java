@@ -16,8 +16,9 @@ public class Main {
             tree.insert(pair[0], pair[1]);
         }
 
-        System.out.println(tree.getRoot().getLeft().getLeft().getLeft().getValue()); // S
-        System.out.println(tree.getRoot().getLeft().getValue()); // S
+        tree.translate(".- .-. -.-- / ..-. . .-.. .. .--. .");
+        tree.translate("-... .- .-. -... .- .-. .- / - .. .--. .--. .-");
+        tree.translate("-.-. .- .-. --- .-.. / .- ... ... .. ...");
 
     }
 }

@@ -2,37 +2,60 @@ public class MorseTree {
     private Node root;
 
     public MorseTree() {
-        this.root = new Node(" "); // Inicializa a raiz corretamente
+        this.root = new Node(" ");
     }
 
     public Node getRoot() {
         return root;
     }
 
-    public void insert(String sequence, String value) {
+    public void insert(String morse, String letter) {
         Node current = this.root;
 
-        for (char c : sequence.toCharArray()) { // Itera sobre os caracteres da sequência Morse
-            if (c == '.') {
-                // Verifica se o nó da esquerda já existe
+        for (int i = 0; i < morse.length(); i++) {
+            String c = morse.substring(i, i + 1);
+
+            if (c.equals(".")) {
                 if (current.getLeft() == null) {
-                    current.setLeft(new Node(null)); // Cria novo nó se não existir
+                    current.setLeft(new Node(null));
                 }
-                current = current.getLeft(); // Move para a esquerda
-            } else if (c == '-') {
-                // Verifica se o nó da direita já existe
+                current = current.getLeft();
+            } else if (c.equals("-")) {
                 if (current.getRight() == null) {
-                    current.setRight(new Node(null)); // Cria novo nó se não existir
+                    current.setRight(new Node(null));
                 }
-                current = current.getRight(); // Move para a direita
+                current = current.getRight();
             }
         }
 
-        // Ao final, insere o valor no nó final da sequência Morse
-        current.setValue(value); // Apenas o nó final recebe o valor
+        current.setValue(letter);
     }
 
-    public String translate([] ) {
-        
+    public void translate(String morse) {
+        String[] codeList = morse.split(" ");
+
+        for (String code : codeList){
+            Node current = this.root;
+
+            for (int i = 0; i < code.length(); i++) {
+                String c = code.substring(i, i + 1);
+
+                if (c.equals(".")) {
+                    current = current.getLeft();
+                }
+                else if (c.equals("-")) {
+                    current = current.getRight();
+                }
+                else if (c.equals("/")) {
+                    System.out.print("");
+                }
+
+            }
+
+            String letter = current.getValue();
+            System.out.print(letter);
+        }
+        System.out.println();
     }
+
 }
