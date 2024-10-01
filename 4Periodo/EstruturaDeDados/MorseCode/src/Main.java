@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -19,6 +21,14 @@ public class Main {
         tree.translate(".- .-. -.-- / ..-. . .-.. .. .--. .");
         tree.translate("-... .- .-. -... .- .-. .- / - .. .--. .--. .-");
         tree.translate("-.-. .- .-. --- .-.. / .- ... ... .. ...");
+
+        JFrame frame = new JFrame("Morse Tree Visualization");
+        MorseTreeGUI panel = new MorseTreeGUI(tree);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(800, 600);
+        frame.add(panel);
+        frame.setVisible(true);
+
 
     }
 }

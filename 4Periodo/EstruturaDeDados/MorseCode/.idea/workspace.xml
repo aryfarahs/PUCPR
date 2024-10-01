@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4525918f-120f-493f-a680-860605294609" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MorseGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DesignDeSoftware/Astah/DesignPatterns.asta" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesignDeSoftware/Astah/DesignPatterns.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DesignDeSoftware/Astah/PjBL/DiagramaClassesEzRent.asta" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesignDeSoftware/Astah/PjBL/DiagramaClassesEzRent.asta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MorseTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MorseTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +30,9 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2mXD7fSW0Qo62BEyPOKWxtlTjW4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,10 +40,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.MorseGUI.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/aryga/OneDrive/Documentos/GitHub/PUCPR/4Periodo/EstruturaDeDados/MorseCode"
+    "last_opened_file_path": "C:/Users/aryga/OneDrive/Documentos/GitHub/MorseTree"
   }
 }]]></component>
   <component name="RecentsManager">
