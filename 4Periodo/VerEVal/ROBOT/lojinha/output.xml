@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-10-09T21:42:39.903087" rpa="false" schemaversion="5">
+<suite id="s1" name="Lojinha" source="C:\Users\aryga\OneDrive\Documentos\GitHub\PUCPR\4Periodo\VerEVal\ROBOT\lojinha\lojinha.robot">
+<test id="s1-t1" name="CT1 - Acessar Lojinha com sucesso" line="8">
+<kw name="Abrir Site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-09T21:42:40.494877" level="INFO">Opening browser 'chrome' to base url 'http://165.227.93.41/lojinha-web/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-09T21:42:40.494554" elapsed="6.801565"/>
+</kw>
+<status status="PASS" start="2024-10-09T21:42:40.493566" elapsed="6.802899"/>
+</kw>
+<kw name="Preencher Campo Usuario Com &quot;rafael&quot;" source_name="Preencher Campo Usuario Com &quot;${USER}&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T21:42:47.298931" level="INFO">Typing text 'rafael' into text field 'name=usuario'.</msg>
+<arg>name=usuario</arg>
+<arg>${USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T21:42:47.297885" elapsed="0.261329"/>
+</kw>
+<status status="PASS" start="2024-10-09T21:42:47.297245" elapsed="0.262208"/>
+</kw>
+<kw name="Preencher Campo Senha Com &quot;123456&quot;" source_name="Preencher Campo Senha Com &quot;${PASSWORD}&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-09T21:42:47.561040" level="INFO">Typing text '123456' into text field 'name=senha'.</msg>
+<arg>name=senha</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-09T21:42:47.560686" elapsed="0.252806"/>
+</kw>
+<status status="PASS" start="2024-10-09T21:42:47.560041" elapsed="0.253703"/>
+</kw>
+<status status="PASS" start="2024-10-09T21:42:40.492526" elapsed="7.321847"/>
+</test>
+<status status="PASS" start="2024-10-09T21:42:39.909331" elapsed="7.906683"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Lojinha">Lojinha</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
