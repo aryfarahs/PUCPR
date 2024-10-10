@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.11.9 on win32)" generated="2024-10-08T21:10:33.965687" rpa="false" schemaversion="5">
+<suite id="s1" name="Pucpr" source="C:\Users\aryga\OneDrive\Documentos\GitHub\PUCPR\4Periodo\VerEVal\ROBOT\pucpr.robot">
+<test id="s1-t1" name="Cenário 1: Acessando o site" line="13">
+<kw name="Open Browser">
+<msg time="2024-10-08T21:10:34.007012" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>https://www.seusite.com</arg>
+<arg>chrome</arg>
+<status status="FAIL" start="2024-10-08T21:10:34.006022" elapsed="0.000990">No keyword with name 'Open Browser' found.</status>
+</kw>
+<status status="FAIL" start="2024-10-08T21:10:34.004002" elapsed="0.004026">No keyword with name 'Open Browser' found.</status>
+</test>
+<status status="FAIL" start="2024-10-08T21:10:33.967663" elapsed="0.040365"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Pucpr">Pucpr</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-08T21:10:34.003025" level="ERROR">Error in file 'C:\Users\aryga\OneDrive\Documentos\GitHub\PUCPR\4Periodo\VerEVal\ROBOT\pucpr.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\aryga\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\python311.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0
+  C:\Users\aryga\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\site-packages</msg>
+</errors>
+</robot>
