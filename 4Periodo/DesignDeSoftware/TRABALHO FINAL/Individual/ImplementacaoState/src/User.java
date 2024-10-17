@@ -1,15 +1,27 @@
-public class User {
-    private String estado;
+import javax.swing.text.html.InlineView;
 
-    public User(String estado) {
+public class User {
+    private EstadoUser estado;
+    private String estadoChar;
+
+    public User() {
+        this.estado = new Online();
+    }
+
+    public void setEstado(EstadoUser estado) {
         this.estado = estado;
+    }
+
+    public void mudarEstado(int estado) {
+        this.estado.estado(this, estado);
     }
 
     public String getEstado() {
-        return estado;
+        return estadoChar;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setEstado(String estadoChar) {
+        this.estadoChar = estadoChar;
     }
+
 }
