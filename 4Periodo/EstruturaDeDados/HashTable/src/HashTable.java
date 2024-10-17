@@ -15,7 +15,7 @@ public class HashTable {
     }
 
     public void inserir(int chave) {
-        table = table.ad(chave)
+
     }
 
 

@@ -19,4 +19,3 @@ Preencher Campo Usuario Com "${USER}"
 
 Preencher Campo Senha Com "${PASSWORD}"
     Input Text    name=senha    ${PASSWORD}
-    
