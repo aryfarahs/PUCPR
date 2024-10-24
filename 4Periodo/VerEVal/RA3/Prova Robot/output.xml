@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-10-23T21:18:44.834244" rpa="false" schemaversion="5">
+<suite id="s1" name="Formulario" source="C:\Users\aryga\OneDrive\Documentos\GitHub\PUCPR\4Periodo\VerEVal\RA3\Prova Robot\formulario.robot">
+<test id="s1-t1" name="CT1 - Preencher formulário corretamente" line="19">
+<kw name="DADO QUE o usuário acessa o site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:18:45.488461" level="INFO">Opening browser 'Chrome' to base url 'https://forms.office.com/pages/responsepage.aspx?id=w_YeiiSDA0G_ShMoxdw2U8bAlGkIKERKjhA2BSBR5mxUOU1FQkxDV1BOUjc3Q0M4MFdXVTM5SFJOTi4u&amp;route=shorturl'.</msg>
+<msg time="2024-10-23T21:18:47.063296" level="WARN">The chromedriver version (129.0.6668.91) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.59); currently, chromedriver 130.0.6723.69 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-23T21:18:45.487916" elapsed="6.066631"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T21:18:52.556499" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T21:18:51.555204" elapsed="1.001611"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:18:45.486609" elapsed="7.070612"/>
+</kw>
+<kw name="QUANDO preencher o formulário corretamente">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:18:52.558954" level="INFO">Typing text 'Empresa Teste' into text field 'xpath=//input[@aria-labelledby="QuestionId_rb0bf97002b20402faa716f69df244edb QuestionInfo_rb0bf97002b20402faa716f69df244edb"]'.</msg>
+<arg>${NOME_EMPRESA}</arg>
+<arg>Empresa Teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T21:18:52.558444" elapsed="0.313459"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:18:52.873096" level="INFO">Typing text 'Rua Teste, 123' into text field 'xpath=//input[@aria-labelledby="QuestionId_r0ba51155d92d431a8e44449efa3f199b QuestionInfo_r0ba51155d92d431a8e44449efa3f199b"]'.</msg>
+<arg>${ENDERECO_EMPRESA}</arg>
+<arg>Rua Teste, 123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T21:18:52.872452" elapsed="0.410163"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:18:53.283850" level="INFO">Typing text 'Proprietario Teste' into text field 'xpath=//input[@aria-labelledby="QuestionId_r1b85a5598e50432bac5b6cdcb6b3df84 QuestionInfo_r1b85a5598e50432bac5b6cdcb6b3df84"]'.</msg>
+<arg>${PROPRIETARIO}</arg>
+<arg>Proprietario Teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T21:18:53.283230" elapsed="0.470307"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:18:53.754492" level="INFO">Typing text '41999999999' into text field 'xpath=//input[@aria-labelledby="QuestionId_r32ba7bf4f68b4fecb17099ccf106ecb0 QuestionInfo_r32ba7bf4f68b4fecb17099ccf106ecb0"]'.</msg>
+<arg>${CONTATO}</arg>
+<arg>41999999999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T21:18:53.753939" elapsed="0.343681"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:18:54.098756" level="INFO">Typing text '23/10/2024' into text field 'id=DatePicker0-label'.</msg>
+<arg>${DATA_DE_CADASTRO}</arg>
+<arg>23/10/2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T21:18:54.098169" elapsed="0.398770"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T21:18:55.499035" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T21:18:54.497373" elapsed="1.001870"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:18:55.709395" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-23T21:18:55.499533" elapsed="0.210240"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:18:52.558041" elapsed="3.152065"/>
+</kw>
+<kw name="ENTÃO o formulário é enviado com sucesso">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:18:55.712469" level="INFO">Clicking button 'xpath=//button[@data-automation-id="submitButton"]'.</msg>
+<arg>${BTN_ENVIAR}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T21:18:55.711875" elapsed="0.185086"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T21:19:00.898463" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T21:18:55.897411" elapsed="5.001323"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:18:55.711128" elapsed="5.187922"/>
+</kw>
+<kw name="E uma mensagem de sucesso é exibida">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:19:00.933913" level="INFO">Current page contains text 'Suas respostas foram enviadas com êxito.'.</msg>
+<arg>${SUCESSO}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-23T21:19:00.900355" elapsed="0.033705"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-23T21:19:01.159779" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-23T21:19:00.934312" elapsed="0.225848"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-23T21:19:01.160658" elapsed="2.507340"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:19:00.899731" elapsed="2.768528"/>
+</kw>
+<status status="PASS" start="2024-10-23T21:18:45.485014" elapsed="18.183821"/>
+</test>
+<doc>Teste de Avaliação de Cadatro do Fornecedor</doc>
+<status status="PASS" start="2024-10-23T21:18:44.836687" elapsed="18.833388"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Formulario">Formulario</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-23T21:18:47.063296" level="WARN">The chromedriver version (129.0.6668.91) detected in PATH at C:\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.59); currently, chromedriver 130.0.6723.69 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
