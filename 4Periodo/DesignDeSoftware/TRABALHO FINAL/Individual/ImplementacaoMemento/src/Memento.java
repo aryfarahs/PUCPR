@@ -10,7 +10,4 @@ public class Memento {
         return nameItem;
     }
 
-
-
-
 }

@@ -1,5 +1,3 @@
-import javax.swing.text.html.InlineView;
-
 public class User {
     private EstadoUser estado;
     private String estadoChar;
