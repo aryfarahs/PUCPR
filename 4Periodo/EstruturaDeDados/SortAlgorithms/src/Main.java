@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,18 +9,27 @@ public class Main {
         System.out.println("Antes do Sort");
         System.out.print("Bubble: ");
         printArray(array_bubble);
+
         System.out.print("\nInsertion: ");
         printArray(array_insertion);
 
-        bubbleSort(array_bubble, array_bubble.length);
-        insertionSort(array_insertion);
+        int[] reaady_bubble = bubbleSort(array_bubble, array_bubble.length);
+        int[] ready_insertion = insertionSort(array_insertion);
 
         System.out.println("\n");
         System.out.println("Depois do Sort");
+
+        System.out.print("Insertion: ");
+        for (int i = 0; i < reaady_bubble.length; i++) {
+            System.out.print(reaady_bubble[i] + " | ");
+        }
+        System.out.println();
+
         System.out.print("Bubble: ");
-        printArray(array_bubble);
-        System.out.print("\nInsertion: ");
-        printArray(array_insertion);
+        for (int i = 0; i < ready_insertion.length; i++) {
+            System.out.print(ready_insertion[i] + " | ");
+        }
+        System.out.println("\n");
 
     }
 
@@ -35,9 +46,9 @@ public class Main {
     }
 
     // BUBBLESORT
-    public static void bubbleSort(int[] array, int size) {
+    public static int[] bubbleSort(int[] array, int size) {
         if (size == 1) {
-            return;
+            return array;
         }
 
         for (int i = 0; i < size - 1; i++) {
@@ -45,26 +56,25 @@ public class Main {
                 swap(array, i, i + 1);
             }
         }
-//        System.out.println();
-//        printArray(array);
+
         bubbleSort(array, size - 1);
+        return array;
     }
 
     // INSERTIONSORT
-    public static void insertionSort(int[] array) {
+    public static int[] insertionSort(int[] array) {
         int lenght = array.length;
 
-        while (lenght > 1) {
-            for (int i = 1; i < lenght; i++) {
-                if (array[i] < array[i - 1]) {
-                    swap(array, i, i - 1);
+        while (lenght > 0) {
+            for (int i = 0; i < lenght - 1; i++) {
+                if (array[i + 1] < array[i]) {
+                    swap(array, i, i + 1);
                 }
             }
-            System.out.println();
-            printArray(array);
             lenght--;
         }
 
+        return array;
     }
 
 }
