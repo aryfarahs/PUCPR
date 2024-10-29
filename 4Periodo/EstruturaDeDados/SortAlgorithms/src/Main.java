@@ -5,7 +5,9 @@ public class Main {
 
         int[] array_bubble = {9, 4, 65, 7 ,12 ,5};
         int[] array_insertion = {13, 4, 12, 5, 23, 1};
+        int[] array_quick = {19, 34, 2, 77, 54, 131};
 
+        // printa os arrays antes de serem ordenados
         System.out.println("Antes do Sort");
         System.out.print("Bubble: ");
         printArray(array_bubble);
@@ -13,23 +15,26 @@ public class Main {
         System.out.print("\nInsertion: ");
         printArray(array_insertion);
 
+        System.out.print("\nQuick: ");
+        printArray(array_quick);
+
+        // ordena os arrays
+        System.out.println("\n\nOrdenando...");
         int[] reaady_bubble = bubbleSort(array_bubble, array_bubble.length);
         int[] ready_insertion = insertionSort(array_insertion);
+        int[] ready_quick = quickSort(array_quick, 0, array_quick.length - 1);
 
-        System.out.println("\n");
+        // printa os arrays depois de serem ordenados
         System.out.println("Depois do Sort");
 
         System.out.print("Insertion: ");
-        for (int i = 0; i < reaady_bubble.length; i++) {
-            System.out.print(reaady_bubble[i] + " | ");
-        }
-        System.out.println();
+        printArray(ready_insertion);
 
-        System.out.print("Bubble: ");
-        for (int i = 0; i < ready_insertion.length; i++) {
-            System.out.print(ready_insertion[i] + " | ");
-        }
-        System.out.println("\n");
+        System.out.print("\nBubble: ");
+        printArray(reaady_bubble);
+
+        System.out.print("\nQuick: ");
+        printArray(ready_quick);
 
     }
 
@@ -78,8 +83,28 @@ public class Main {
     }
 
     // QUICKSORT
-    public static int[] quickSort(int[] array) {
-        
+    public static int[] quickSort(int[] array, int start, int end) {
+        if (start < end) {
+            int pivotIndex = qs(array, start, end); // calcula o pivot
+            quickSort(array, start, pivotIndex - 1); // ordena a primeira metade
+            quickSort(array, pivotIndex + 1, end); // ordena a segunda metade
+        }
+        return array;
+    };
+
+    public static int qs(int[] array, int start, int end) {
+        int pivot = array[end]; // pivot de referencia
+        int smaller = start -1; // balde para armazenar os valores menores que o pivot
+
+        for (int i = start; i < end; i++) { // percorre o arrya
+            if (array[i] < pivot) { // se o atual for menor que o pivot...
+                smaller++; // incrementa o indice de "menores"
+                swap(array, i, smaller); // troca o indice atual com o indice de menores
+            }
+        }
+        swap(array, smaller + 1, end); // troca o pivot com o indice de menores + 1
+        return smaller + 1;
     }
+
 
 }
